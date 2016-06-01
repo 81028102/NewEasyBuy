@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*通栏广告样式*/
+#silder{
+    width:223px;
+    float:right;
+    margin-top:5px;
+}
+.book_sort{
+    border:solid 1px #999;
+    margin-bottom:10px;
+}
+.book_seven_title{
+ 	background-color:#fff0d9;
+ 	color:#882D00;
+    font-size:14px;
+    height:25px;
+    padding-left:10px;
+    line-height:28px;
+}
+.book_seven_border{
+/*     background-color:#f2f4df; */
+    margin:3px;
+}
+.book_seven_top{
+    background-image:url(../images/dd_seven_bg.jpg);
+    background-repeat:repeat-x;
+    height:18px;
+    clear:both;
+}
+.book_seven_content{
+    border:solid 1px #bdc1c4;
+    border-top:0px;
+    clear:both;
+    padding:3px;
+    height:375px;
+}
+#book_seven_cate li{
+    float:right;
+    background-image:url(../images/dd_seven_bg1.jpg);
+    background-repeat:no-repeat;
+    width:35px;
+    height:18px;
+    text-align:center;
+    cursor:pointer;
+}
+#book_seven_cate li:hover{
+    float:right;
+    background-image:url(../images/dd_seven_bg2.jpg);
+    background-repeat:no-repeat;
+    width:35px;
+    height:18px;
+    text-align:center;
+    color:#882D00;
+}
+.book_seven_content_left{
+    float:left;
+    width:22px;
+}
+.book_seven_content_right{
+    width:175px;
+    float:left;
+}
+#book_seven_number dt{
+    height:85px;
+}
+#book_seven_number dd{
+    height:25px;
+}
+#book_seven_hearten dt{
+    width:55px;
+    text-align:center;
+    float:left;
+}
+#book_seven_hearten dd{
+    width:120px;
+    float:left;
+    height:85px;
+}
+#book_seven_hearten ul li{
+    line-height:24px;
+}

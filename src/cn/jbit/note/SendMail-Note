@@ -1,0 +1,36 @@
+------>>关于邮件发送服务
+
+步骤一:去QQ邮箱中开启POP3/SMTP服务(第三方登陆时,密码矿输入授权码即可)
+步骤二:将邮箱接口(mailSender)所需要的jar包放进lib下面,有"小奶瓶"出现即可
+1、javax.mail.jar
+2、freemarker-2.3.19.jar
+--连接邮箱发送服务的jar包
+步骤三:配置邮箱接口(mailSender) 放进applicationContext.xml
+1、服务器:smtp.qq.com
+2、端口号:587
+3、测试用户名:981028102@qq.com
+4、授权码(密码):cmlnmxegmyecbded(明码:开启POP3/SMTP服务时产生的)
+5、协议:smtp
+6、默认编码:utf-8
+7、设置SMTP服务器需要用户验证:mail.smtp.auth
+步骤四:配置Interceptor拦截器(是AOP的一种实现策略)
+1、编写MyTimerInterceptor.java类
+   (继承)extends AbstractInterceptor
+         调用invoke方法
+2、在struts2框架中struts.xml
+	配置interceptor拦截器配置
+<interceptors>
+	<interceptor name="MyTimerInterceptor"
+		class="cn.jbit.Interceptors.MyTimerInterceptor">
+	</interceptor>
+	<interceptor-stack name="MyStack">
+		<interceptor-ref name="MyTimerInterceptor"></interceptor-ref>
+		<interceptor-ref name="defaultStack" />
+	</interceptor-stack>
+</interceptors>
+在Action中加入
+	<interceptor-ref name="MyStack"></interceptor-ref>
+	<interceptor-ref name="token"></interceptor-ref>
+步骤五:在sendemail.jsp页面的时候加入<s:token></s:token> (不要忘记配置struts2的jstl标准标签库<%@ taglib uri="/struts-tags" prefix="s"%>)
+
+^_^提醒:必须开启网络,才能发送邮件给客服人员。(可能耗费一些流量)

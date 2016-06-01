@@ -1,0 +1,19 @@
+------>>关于Svn搭建管理项目  (大大减少团队开发时间,增加其开发效率)
+
+步骤一:首先去网上下载site-1.6.18.zip 和 VisualSVN-Server-2.6.0.msi
+步骤二:将site-1.6.18.zip放入Myeclipse(右键软件)-->打开文件位置-->dropins文件下
+步骤三:然后将site-1.6.18.zip解压成文件夹site-1.6.18
+步骤四:然后安装VisualSVN-Server-2.6.0.msi
+步骤五:安装完成VisualSVN-Server-2.6.0.msi后,打开安装完成后的软件(VisualSVN Server Manager)
+1、右键Repositories-->create new repository-->Repository Name(输入一个名字)-->一直下一步就行-->完成
+2、右键User-->Create User-->User name(登录名) Password (密码) Confirm password(确认密码)-->完成
+3、打开Myeclipse-->菜单栏上的(Window)-->Show View-->Other-->SVN资源库
+4、在下面控制台可以看到有SVN资源库
+5、选择左边的一个项目-->右键项目-->Team-->Share Project-->选择SVN-->创建一个位置-->输入(在步骤五中的1完成后-->对名字右键-->Copy URL to Clipboard)-->出现一个接受数字验证(暂时接受,永久接受)-->输入用户名和密码(步骤五中的2创建的登录名和密码)-->导入到Svn-->完成-->控制台会显示结构说明存入成功
+例:https://172.20.56.13/svn/dong
+协议://端口号/svn(不变)/工作库名(Create New Repository)
+6、搭建完毕之后 Svn软件不能关闭。否则别人无法连接
+7、使用时检出项目就行
+
+^_^提醒:1、当Ip地址变动后,需要重新在Myeclipse下的控制台选择Svn资源库重新定位或者新建就行。2、可以根据安全考虑需要暂时接受,还是永久接受,检出项目。3、先更新项目再提交 ,如果有冲突先更新,再修改。(慎重直接提交!!!)4、养成好习惯,每次修改文件添加注释
+^_^总之:SVN的出现我觉得并不仅仅是(大大减少团队开发时间,增加其开发效率),而是(考验团队开发过程中合作配合,也增加了团队之间的感情,出现摩擦难免的,只要我们齐心协力合作为了共同的目标,就能化解摩擦,解决问题)

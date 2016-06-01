@@ -1,0 +1,13 @@
+(function(arale){ if(!arale) return;var deps = arale.deps;
+deps.addDependency('arale.string',['arale.string-1.0.js','arale.base-1.1.js']);
+deps.addDependency('arale.base',['arale.base-1.1.js']);
+deps.addDependency('arale.dom',['arale.dom-1.1.js','arale.string-1.0.js','arale.hash-1.0.js','arale.array-1.1.js','arale.base-1.1.js']);
+deps.addDependency('arale.aspect',['arale.aspect-1.0.js','arale.base-1.1.js']);
+deps.addDependency('aralex.base',['aralex.base-1.1.js','arale.aspect-1.0.js','arale.tmpl-1.0.js','arale.class-1.0.js','arale.event-1.1.js','arale.dom-1.1.js','arale.string-1.0.js','arale.hash-1.0.js','arale.array-1.1.js','arale.base-1.1.js']);
+deps.addDependency('arale.tmpl',['arale.tmpl-1.0.js','arale.base-1.1.js']);
+deps.addDependency('arale.hash',['arale.hash-1.0.js','arale.base-1.1.js']);
+deps.addDependency('arale.class',['arale.class-1.0.js','arale.base-1.1.js']);
+deps.addDependency('alipay.faq',['alipay.faq-1.0.js','aralex.base-1.1.js','arale.aspect-1.0.js','arale.tmpl-1.0.js','arale.class-1.0.js','arale.event-1.1.js','arale.dom-1.1.js','arale.string-1.0.js','arale.hash-1.0.js','arale.array-1.1.js','arale.base-1.1.js']);
+deps.addDependency('arale.event',['arale.event-1.1.js','arale.dom-1.1.js','arale.string-1.0.js','arale.hash-1.0.js','arale.array-1.1.js','arale.base-1.1.js']);
+deps.addDependency('arale.array',['arale.array-1.1.js','arale.base-1.1.js']);
+}((typeof arale == 'undefined') ? undefined : arale));

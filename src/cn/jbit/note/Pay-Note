@@ -1,0 +1,24 @@
+------>>关于网银支付的步骤
+
+步骤一:首先去支付平台上注册一个商户帐号密码
+步骤二:将PaymentUtil工具类放进util工具包中
+步骤三:需要调用14条 签名数据
+1、(p0_Cmd)            业务类型 "Buy"
+2、(p1_MerId)          商户编号(10001126856  唯一身份标识)-->相当于测试的商户用户名
+3、(p2_Order)          商户订单号
+4、(p3_Amt)    		      支付金额,单位:元
+5、(p4_Cur) 			      交易币种(CNY 中国币种)
+6、(p5_Pid)			      商品名称
+7、(p6_Pcat)		                商品种类
+8、(p7_Pdesc)	                商品描述
+9、(p8_Url)			      商户接收支付成功数据的地址 (首页地址即可)
+10、(p9_SAF)		                送货地址
+11、(pa_MP)			      商户扩展信息
+12、(pd_FrpId)		      支付通道编码- 第三方规定的银行的编号 (例如:ICBC-NET(中国工商银行) HXB-NET(华夏银行) ECITIC-NET(中信银行) CMBCHINA-NET(招商银行) CMBC-NET(中国民生银行) CEB-NET(中国光大银行) CCB-NET(建设银行) BOCO-NET(交通银行) BOC-NET(中国银行) BCCB-NET(北京银行) ABC-NET(农业银行) )
+13、(pr_NeedResponse)  应答机制 "1"
+14、(keyValue)		      密钥(69cl522AV6q613Ii4W6u8K6XuW8vM1N6bFgyv769220IuYe9u37N4y7rI4Pl)-->相当于测试的商户密码
+步骤四:在页面上选择购买一件商品
+步骤五:将页面的值传入到步骤二中,然后重定向(Response)到-->URL  https://www.yeepay.com/app-merchant-proxy/node  
+步骤六:实现去平台上支付金额即可
+
+^_^提醒:必须开启网络，才能使用网银支付。商户测试帐号:10001126856 密钥:69cl522AV6q613Ii4W6u8K6XuW8vM1N6bFgyv769220IuYe9u37N4y7rI4Pl   仅仅用于测试所以支付金额不要太大!

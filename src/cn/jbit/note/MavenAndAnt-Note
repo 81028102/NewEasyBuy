@@ -1,0 +1,16 @@
+------>>关于Maven和Ant来构建管理项目
+
+步骤一:首先去网上下载apache-maven-3.2.3.zip 和  apache-ant-1.9.5.zip 和   MavenRepository.zip 和   m2eclipse(安装在C盘下)
+步骤二:配置环境变量(右键桌面的计算机-->属性-->高级系统设置-->菜单栏上的高级-->环境变量)--完成
+ANT_HOME
+C:\Program Files (x86)\apache-ant-1.9.5
+MAVEN_HOME
+C:\Program Files (x86)\apache-maven-3.2.3
+步骤三:打开cmd命令 输入 mvn -version  和     ant -version 查看配置好没有
+步骤四:将maven.link文件放入Myeclipse(右键软件)-->打开文件位置-->dropins文件下-->文件内容写  例:path=C:\\m2eclipse
+步骤五:Myeclipse(右键软件)-->打开文件位置-->myeclipse.ini里面配置(内容:-vm 
+															  C:\Program Files (x86)\Java\jdk1.7.0_51\bin\javaw.exe)
+步骤六:在Myeclipse工作区同级中的.m2 将下载的	MavenRepository.zip解压-->MavenRepository-->里面的.m2替换默认的Myeclipse下的.m2		
+步骤七:去Myeclipse中的菜单Window-->Preferences-->Maven-->Installations-->添加(Add)apache-maven-3.2.3	文件的路径			
+
+^_^提醒:需要有网路才行,请按照步骤一步一步走,以免出现错误!!!

@@ -1,0 +1,31 @@
+------>>关于quartz定时器搭建配置
+
+步骤一:首先将quartz框架所需要的jar包放进lib下面,有"小奶瓶"出现即可
+1、quartz-all-1.8.6.jar
+步骤二:创建easybuy_countproduct 类  BizProduct.hbm.xml easybuy_CountSalesMonthDao类  easybuy_CountSalesMonthDaoImpl类  StatisticsService类  StatisticsServiceImpl类
+1、 BizProduct.hbm.xml配置映射文件(用spring来实现hibernate)
+2、来实现统计输出到控制台
+步骤三:在applicationContext.xml中配置 采用基于公历的crontrigger定时器接口
+1、配置Job服务(定时任务)
+<bean id="statisticsJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="statisticsService"></property>
+		<property name="targetMethod" value="ouputProduct"></property>
+</bean>
+2、配置触发器
+<bean id="myTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="statisticsJob"></property>
+		<property name="cronExpression" value="0 0 23 L * ?"></property>
+</bean>
+3、配置调度器(指定触发器(也可以添加其他的触发器))
+<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- 指定触发器 -->
+				<ref bean="myTrigger" />
+				<!-- 可以在这里添加其他的触发器 -->
+			</list>
+		</property>
+</bean>
+步骤四:测试打印运行main主方法
+1、运行QuartzMain.java类

@@ -1,0 +1,21 @@
+------>>关于Sqlserver数据库+JNDI数据库连接池
+
+步骤一:首先编写BaseDao.java类
+1、	Context ctx = new InitialContext();
+	DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/easybuy");
+	Connection	con = ds.getConnection();
+^_^提醒:不要忘记关闭连接
+步骤二:配置项目下的web.xml 加入如下代码
+1、<resource-ref>
+        <description>news DataSource</description >
+        <res-ref-name>jdbc/neweasybuy</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+  </resource-ref>
+步骤三:配置Tomcat下的conf文件下的content.xml文件 加入如下代码
+1、<Resource name="jdbc/easybuy" auth="Container" type="javax.sql.DataSource"
+   maxActive="100" maxIdle="30" maxWait="10000" username="sa" password="sa"
+   driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" url="jdbc:sqlserver://localhost:1434;DatabaseName=easybuy" />
+^_^提醒:更换Tomcat必须要重新配置步骤二 !!!
+
+^_^提醒:根据需要,也可以随时更换数据库,只需在Tomcat下的conf文件下的content.xml文件配置加入代码即可(不要忘记导入连接数据库的jar包)

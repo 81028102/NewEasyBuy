@@ -1,0 +1,399 @@
+.global-type-global {
+	min-height: 87px; _height: 87px;
+}
+.global-reset {
+	font: 400 12px/1.5 Verdana, Arial, "Hiragino Sans GB", "ËÎÌו", sans-serif; font-size-adjust: none; font-stretch: normal;
+}
+.global-reset ol {
+	list-style: none;
+}
+.global-reset ul {
+	list-style: none;
+}
+.global-reset img {
+	border: 0px currentColor;
+}
+.global-reset .fn-clear {
+	zoom: 1;
+}
+.global-reset .fn-clear::before {
+	display: table; content: "";
+}
+.global-reset .fn-clear::after {
+	display: table; content: "";
+}
+.global-reset .fn-clear::after {
+	clear: both;
+}
+.global-hide {
+	display: none;
+}
+.global-cms-block {
+	display: none;
+}
+.global-loading {
+	background: url("https://i.alipayobjects.com/e/201205/2bW1qj1jon.gif") no-repeat center; height: 50px;
+}
+.global-top-a .global-top {
+	background: rgb(61, 71, 74); height: 27px; color: rgb(255, 255, 255);
+}
+.global-top-a .global-top ul {
+	margin: 0px; padding: 0px;
+}
+.global-top-a .global-top a {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.global-top-a .global-top a:hover {
+	text-decoration: underline;
+}
+.global-top-a .global-top .iconfont {
+	color: rgb(255, 255, 255); cursor: pointer;
+}
+.global-top-a .global-top-container {
+	margin: auto; width: 990px;
+}
+.global-top-a .global-top-left {
+	float: left;
+}
+.global-top-a .global-top-right {
+	float: right;
+}
+.global-top-a .global-top-item {
+	padding: 0px 7px; height: 27px; line-height: 26px; float: left;
+}
+.global-top-a .global-top-item-first {
+	padding-left: 0px; border-left-color: currentColor; border-left-width: 0px; border-left-style: none;
+}
+.global-top-a .global-top-item-last {
+	padding-right: 0px; border-right-color: currentColor; border-right-width: 0px; border-right-style: none;
+}
+.global-top-a .global-top .global-top-angle {
+	color: rgb(221, 221, 221); font-size: 10px; margin-left: 1px; display: inline-block; -webkit-transition: -webkit-transform .5s ease; -moz-transition: -moz-transform .5s ease; transition: transform .5s ease; -o-transition: -o-transform .5s ease; -ms-transition: -ms-transform .5s ease;
+}
+.global-top-a .global-top-item-hover {
+	background: rgb(242, 242, 242); border-radius: 1px 1px 0px 0px; height: 18px; color: rgb(61, 71, 74); line-height: 18px; padding-bottom: 5px; border-top-color: rgb(61, 71, 74); border-top-width: 4px; border-top-style: solid; zoom: 1; -webkit-border-radius: 1px 1px 0 0;
+}
+.global-top-a .global-top-item-hover .global-top-angle {
+	color: rgb(104, 109, 113); -ms-transform: rotate(180deg); -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg);
+}
+.global-top-a .global-top-item-hover a {
+	color: rgb(61, 71, 74);
+}
+.global-top-a .global-top-item-hover a:hover {
+	color: rgb(230, 110, 30);
+}
+.global-top-a .global-top-item-hover a.global-msg-count {
+	color: rgb(255, 255, 255);
+}
+.global-top-a .global-top-item-hover a.global-msg-count:hover {
+	color: rgb(255, 255, 255);
+}
+.global-top-a .global-top-item-hover .iconfont {
+	color: rgb(61, 71, 74);
+}
+.global-top-a .global-top-overlay {
+	background: rgb(242, 242, 242); border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(238, 238, 238) rgb(238, 238, 238); padding: 3px 6px;
+}
+.global-top-a .global-top-overlay ul {
+	margin: 0px; padding: 0px;
+}
+.global-top-a .global-top-overlay a {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.global-top-a .global-top-overlay a:hover {
+	color: rgb(230, 110, 30); text-decoration: underline;
+}
+.global-top-a .global-top-overlay-item {
+	padding: 5px 7px; height: 18px; line-height: 18px; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.global-top-a #globalUser {
+	cursor: pointer;
+}
+.global-top-a .global-top-seperator {
+	padding: 0px 4px; color: rgb(97, 103, 109);
+}
+.global-top-a .global-widget-help .iconfont {
+	width: 16px; color: rgb(61, 71, 74); font-size: 14px; margin-right: 3px; vertical-align: middle; display: inline-block;
+}
+.global-top-a .global-widget-more .iconfont {
+	width: 16px; color: rgb(61, 71, 74); font-size: 14px; margin-right: 3px; vertical-align: middle; display: inline-block;
+}
+.global-top-a #globalMore {
+	margin: 4px 0px 0px 5px; border-radius: 2px; height: 18px; line-height: 18px; padding-right: 4px; padding-left: 4px; background-color: rgb(80, 90, 93); -webkit-border-radius: 2px;
+}
+.global-top-a .global-top-item-hover#globalMore {
+	background: rgb(242, 242, 242); border-radius: 2px 2px 0px 0px; margin-top: 0px; -webkit-border-radius: 2px 2px 0 0;
+}
+.global-top-a .global-button {
+	padding: 0px 20px; border-radius: 2px; text-align: center; font-family: verdana,Hiragino Sans GB; font-size: 14px; font-weight: 700; text-decoration: none; vertical-align: middle; display: inline-block; cursor: pointer; -webkit-border-radius: 2px;
+}
+.global-top-a .global-button:hover {
+	text-decoration: none;
+}
+.global-top-a .ui-button.global-button:active {
+	top: 1px; position: relative;
+}
+.global-top-a .global-button-sorange {
+	padding: 0px 12px; border: 1px solid rgb(246, 118, 0); height: 23px; color: rgb(255, 255, 255); line-height: 23px; font-size: 12px; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFA600, endColorstr=#FFFE9200); box-shadow: inset 0px -2px 3px rgba(255,255,255,0.4); background-color: rgb(245, 170, 43); -webkit-box-shadow: 0 -2px 3px rgba(255, 255, 255, .4) inset;
+}
+.global-top-a .global-button-sorange:hover {
+	border: 1px solid rgb(242, 102, 0); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFB91C, endColorstr=#FFFFA700); box-shadow: inset 0px -2px 2px rgba(255,255,255,0.4); background-color: rgb(245, 170, 43); -webkit-box-shadow: 0 -2px 2px rgba(255, 255, 255, .4) inset;
+}
+.global-top-a .global-top-overlay .global-button-sorange {
+	color: rgb(255, 255, 255);
+}
+.global-top-a .global-top-overlay .global-button-sorange:hover {
+	color: rgb(255, 255, 255); text-decoration: none;
+}
+.global-top-a .global-button-swhite {
+	padding: 0px 12px; border: 1px solid rgb(179, 179, 179); height: 23px; line-height: 23px; font-size: 12px; filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#FFEBEBEB); box-shadow: inset 0px -2px 2px rgba(255,255,255,0.33); background-color: rgb(242, 242, 242); -webkit-box-shadow: 0 -2px 2px rgba(255, 255, 255, .33) inset;
+}
+.global-top-a .global-button-swhite:hover {
+	border: 1px solid rgb(153, 153, 153); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFFFF, endColorstr=#FFF0F0F0); background-color: rgb(246, 246, 246);
+}
+.global-top-a .global-button-swhite:active {
+	color: rgb(89, 89, 89);
+}
+.global-top-a .global-top-overlay .global-button-swhite {
+	color: rgb(89, 89, 89);
+}
+.global-top-a .global-top-overlay .global-button-swhite:hover {
+	color: rgb(89, 89, 89); text-decoration: none;
+}
+.global-top-a #globalMsg {
+	background: rgb(97, 103, 106); margin-left: 5px;
+}
+.global-top-a #globalMsg a {
+	padding: 0px 2px; -webkit-transition: background-color .6s; -moz-transition: background-color .6s; transition: background-color .6s; -o-transition: background-color .6s; -ms-transition: background-color .6s;
+}
+.global-top-a #globalMsg .iconfont {
+	font-size: 14px;
+}
+.global-top-a .global-msg-active#globalMsg {
+	background: rgb(255, 104, 0);
+}
+.global-top-a .global-msg-active#globalMsg a {
+	display: block;
+}
+.global-top-a .global-msg-active#globalMsg a:hover {
+	text-decoration: none;
+}
+.global-top-a .global-msg-tit {
+	margin: 0px 0px 5px; padding: 0px 0px 2px; color: gray; font-size: 12px; font-weight: 700; border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.global-top-a .global-msg-tit a {
+	color: rgb(0, 136, 204);
+}
+.global-top-a .global-msg-tit-link {
+	padding: 0px 6px;
+}
+.global-top-a .global-msg-tit-action {
+	font-weight: 400; float: right;
+}
+.global-top-a .global-msg-item {
+	padding: 4px 5px; overflow: hidden; position: relative; zoom: 1;
+}
+.global-top-a .global-msg-item .global-msg-item-content:hover {
+	color: rgb(102, 102, 102); text-decoration: none;
+}
+.global-top-a .global-msg-item .global-msg-item-priority {
+	color: rgb(204, 51, 0);
+}
+.global-top-a .global-msg-item .global-msg-item-priority:hover {
+	color: rgb(204, 51, 0);
+}
+.global-top-a .global-msg-item .global-msg-item-close {
+	right: -12px; position: absolute;
+}
+.global-top-a .global-msg-item .global-msg-item-close .iconfont {
+	cursor: pointer;
+}
+.global-top-a .global-msg-item .global-msg-item-close:hover {
+	right: 4px; text-decoration: none;
+}
+.global-top-a .global-msg-item-hover {
+	background: rgb(230, 230, 230);
+}
+.global-top-a .global-msg-item-hover .global-msg-item-close {
+	right: 4px;
+}
+.global-top-a .global-msg-confirm {
+	background: rgb(255, 255, 255); padding: 4px 5px; height: 50px;
+}
+.global-top-a .global-msg-confirm .global-msg-comfirm-txt {
+	margin: 0px; padding: 0px 0px 5px;
+}
+.global-top-a .global-account {
+	border-width: 0px 1px 1px; border-style: none solid solid; border-color: currentColor rgb(242, 242, 242) rgb(242, 242, 242); padding: 0px; color: rgb(102, 102, 102);
+}
+.global-top-a .global-account a {
+	color: rgb(0, 136, 204);
+}
+.global-top-a .global-account a:hover {
+	text-decoration: underline;
+}
+.global-top-a .global-account .global-account-head {
+	height: 40px; padding-top: 10px; padding-bottom: 10px; padding-left: 60px; position: relative;
+}
+.global-top-a .global-account .global-account-head .global-account-name {
+	margin-bottom: 3px;
+}
+.global-top-a .global-account .global-account-body {
+	background: rgb(255, 255, 255); padding: 10px;
+}
+.global-top-a .global-account .global-account-body p {
+	margin: 0px;
+}
+.global-top-a .global-account .global-account-body hr {
+	border-width: 1px 0px 0px; border-style: dashed none none; border-color: rgb(227, 227, 227) currentColor currentColor; margin: 8px 0px; height: 0px;
+}
+.global-top-a .global-account .global-top-seperator {
+	color: rgb(204, 204, 204);
+}
+.global-top-a .global-account .global-account-img {
+	left: 10px; top: 10px; position: absolute;
+}
+.global-top-a .global-account .global-account-img img {
+	border: 0px currentColor; width: 40px; height: 40px; display: block;
+}
+.global-top-a .global-account .global-account-img .iconfont {
+	background: rgb(219, 219, 219); border: 1px solid rgb(221, 221, 221); width: 40px; height: 40px; text-align: center; color: rgb(171, 171, 171); font-size: 30px; text-decoration: none; float: left; cursor: pointer;
+}
+.global-top-a .global-account .global-account-robot {
+	left: 40px; top: 36px; display: block; position: absolute;
+}
+.global-top-a .global-account .global-account-robot .iconfont {
+	color: rgb(102, 102, 102); font-size: 12px; position: relative; z-index: 1; cursor: pointer;
+}
+.global-top-a .global-account .global-account-robot .global-account-robot-face {
+	background: rgb(255, 255, 255); left: 3px; top: 6px; width: 11px; height: 10px; position: absolute;
+}
+.global-top-a .global-account .global-account-robot:hover {
+	text-decoration: none;
+}
+.global-top-a .global-account .global-account-robot:hover .iconfont {
+	color: rgb(255, 172, 0);
+}
+.global-top-a .global-account .global-account-balance {
+	color: rgb(249, 141, 0); font-size: 14px; margin-right: 5px;
+}
+.global-top-a .global-account .global-account-showbalance {
+	background: rgb(243, 252, 255); padding: 0px 5px; border-radius: 4px; border: 1px solid rgb(223, 232, 235); color: rgb(0, 136, 204); margin-right: 5px; display: inline-block; -webkit-border-radius: 4px;
+}
+.global-top-a .global-account .global-account-showbalance:hover {
+	background: rgb(0, 136, 204); border: 1px solid rgb(0, 136, 204); color: rgb(255, 255, 255); text-decoration: none;
+}
+.global-common-a .global {
+	background-color: rgb(246, 246, 246);
+}
+.global-common-a .global-header {
+	background: rgb(246, 246, 246); padding: 17px 0px 18px; height: 40px;
+}
+.global-common-a .global-header-content {
+	margin: 0px auto; width: 990px;
+}
+.global-common-a .global-logo {
+	float: left; display: inline;
+}
+.global-common-a .global-logo a {
+	background: url("https://i.alipayobjects.com/i/localhost/png/201406/2m8C9z7xQ5_src.png") no-repeat; width: 115px; height: 40px; display: block; _background: url(https://i.alipayobjects.com/i/localhost/png/201406/2m8IpycRj3_src.png) no-repeat;
+}
+.global-common-a .global-logo a {
+	background: url("https://i.alipayobjects.com/i/localhost/png/201406/2m8CambYir_src.png") no-repeat 0% 0% / 115px 40px; -webkit-background-size: 115px 40px; -moz-background-size: 115px 40px;
+}
+.global-common-a .global-slogan {
+	background: url("https://i.alipayobjects.com/e/201308/peyqbAcDF.png"); width: 130px; height: 40px; margin-left: 5px; float: left; display: block;
+}
+.global-common-a .global-slogan {
+	background: url("https://i.alipayobjects.com/e/201308/pf4lK8mFR.png") 0% 0% / 130px 40px; -webkit-background-size: 130px 40px; -moz-background-size: 130px 40px;
+}
+.global-common-a .global-logo-neighbor {
+	height: 40px; line-height: 43px; float: left;
+}
+.global-common-a .global-title {
+	height: 40px; color: rgb(114, 134, 149); line-height: 60px; padding-left: 10px; font-size: 18px; font-weight: 700; margin-left: 10px; border-left-color: rgb(114, 134, 149); border-left-width: 1px; border-left-style: solid; float: left; display: inline;
+}
+.global-common-a .global-nav {
+	list-style: none; margin: 20px 0px 0px; padding: 0px; width: auto; height: auto; font-size: 16px; float: right; display: inline;
+}
+.global-common-a .global-nav-item {
+	font-weight: 700; margin-left: 32px; float: left; display: inline; position: relative;
+}
+.global-common-a .global-nav-item .iconfont {
+	top: -2px; color: rgb(230, 110, 30); font-size: 12px; margin-right: 4px; visibility: hidden; position: relative;
+}
+.global-common-a .global-nav-item a {
+	color: rgb(77, 77, 77); text-decoration: none;
+}
+.global-common-a .global-nav-item a:hover {
+	color: rgb(230, 110, 30);
+}
+.global-common-a .global-nav-item-current a {
+	color: rgb(230, 110, 30);
+}
+.global-common-a .global-nav-item-arrow {
+	left: 50%; width: 13px; bottom: -25px; color: rgb(217, 217, 217); line-height: 20px; font-size: 16px; margin-left: -8px; display: none; position: absolute; _bottom: -30px;
+}
+.global-common-a .global-nav-item-arrow-border {
+	bottom: -26px; color: rgb(227, 227, 227); _bottom: -31px;
+}
+.global-common-a .global-nav-item-current .global-nav-item-arrow {
+	display: block;
+}
+.global-common-a .global-nav-item-current .iconfont {
+	visibility: visible;
+}
+.global-common-a .global-nav-nosub {
+	margin-bottom: 15px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.global-common-a .global-nav-nosub .global-nav-item-arrow {
+	color: rgb(221, 221, 221);
+}
+.global-common-a .global-nav-nosub .global-nav-item-arrow-border {
+	color: rgb(255, 255, 255);
+}
+.global-common-a .global-subheader {
+	height: 32px; line-height: 32px; margin-bottom: 15px; box-shadow: inset 0px 1px 2px #ddd, 0px 1px 0px #eee; background-color: rgb(227, 227, 227); -webkit-box-shadow: 0 1px 2px #ddd inset, 0 1px 0 #eee;
+}
+.global-common-a .global-subnav {
+	list-style: none; margin: 0px auto; padding: 0px; width: 990px; font-size: 12px; float: none; position: relative;
+}
+.global-common-a .global-subnav-item {
+	color: rgb(103, 109, 112); float: left;
+}
+.global-common-a .global-subnav-item a {
+	padding: 5px 25px 6px; border-radius: 2px; color: rgb(103, 109, 112); line-height: 15px; text-decoration: none; margin-top: 3px; display: block; -webkit-border-radius: 2px;
+}
+.global-common-a .global-subnav-item a:hover {
+	color: rgb(230, 110, 30);
+}
+.global-common-a .global-subnav-item-current a {
+	background-color: rgb(242, 242, 242);
+}
+.global-common-a .global-subnav-line {
+	margin: 13px 7px 13px 0px; width: 0px; height: 14px; border-right-color: rgb(255, 255, 255); border-left-color: rgb(103, 109, 112); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; float: left; display: inline; _zoom: 1; _overflow: hidden;
+}
+.global-common-a .global-subnav-links {
+	margin: 0px; color: rgb(103, 109, 112);
+}
+.global-common-a .global-subnav-links a {
+	color: rgb(103, 109, 112); text-decoration: none; margin-right: 7px; zoom: 1;
+}
+.global-common-a .global-subnav-links a:hover {
+	color: rgb(230, 110, 30);
+}
+.global-common-a .global-separator-pd {
+	width: 0px; height: 14px; line-height: 14px; margin-right: 12px; border-right-color: rgb(239, 240, 241); border-left-color: rgb(103, 109, 112); border-right-width: 1px; border-left-width: 1px; border-right-style: solid; border-left-style: solid; zoom: 1;
+}
+.global-common-a .global-subnav-input {
+	top: 4px; right: 0px; line-height: 1; position: absolute;
+}
+.global-common-a .global-subnav-input input {
+	margin: 0px; padding: 4px 10px; outline: 0px; border-radius: 20px; border: 1px solid rgb(228, 231, 232); width: 148px; height: 14px; line-height: 1; font-size: 12px; -webkit-border-radius: 20px;
+}
+.global-common-a .global-subnav-input-scan {
+	top: 5px; right: 8px; color: rgb(207, 204, 205); line-height: 14px; font-size: 14px; position: absolute;
+}
+.global-common-a .placeholder {
+	color: rgb(204, 204, 204);
+}

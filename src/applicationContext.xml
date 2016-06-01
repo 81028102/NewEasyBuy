@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+	<!-- mailSender接口配置 -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.qq.com"></property><!-- 服务器 -->
+		<property name="port" value="587"></property><!-- 端口 -->
+		<property name="username" value="981028102@qq.com"></property><!-- 用户名 -->
+		<property name="password" value="cmlnmxegmyecbded"></property><!-- 密码(开启POP3/SMTP协议后产生的授权码) -->
+		<property name="protocol" value="smtp"></property><!-- 协议 -->
+		<property name="defaultEncoding" value="utf-8"></property><!-- 默认编码 -->
+		<property name="javaMailProperties">
+			<props>
+				<!-- 设置SMTP服务器需要用户验证 -->
+				<prop key="mail.smtp.auth">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<!-- mailService配置 -->
+	<bean id="mailService" class="cn.jbit.service.MailService">
+		<property name="mailSender" ref="mailSender"></property>
+	</bean>
+
+	<!-- sqlserver数据库配置 -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver">
+		</property>
+		<property name="url"
+			value="jdbc:sqlserver://localhost:1434;DatabaseName=easybuy">
+		</property>
+		<property name="username" value="sa"></property>
+		<property name="password" value="sa"></property>
+	</bean>
+
+	<!-- oracle数据库配置 -->
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName">oracle.jdbc.driver.OracleDriver</property> 
+		<property name="url">jdbc:oracle:thin:@localhost:1521:orcl </property> <property 
+		name="username">scott</property> <property name="password">orcl</property> 
+		</bean> -->
+
+	<!-- mysql数据库配置 -->
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName">com.mysql.jdbc.Driver</property> <property 
+		name="url">jdbc:mysql://localhost:3306/struts2?useUnicode=true&amp;characterEncoding=utf8 
+		</property> <property name="username">root</property> <property name="password">root</property> 
+		</bean> -->
+
+	<!-- Hibernate二级缓存配置 -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.SQLServerDialect
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>cn/jbit/entity/BizProduct.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- DAO配置 -->
+	<bean id="easybuy_CountSalesMonthDao" class="cn.jbit.daoimpl.easybuy_CountSalesMonthDaoImpl">
+		<property name="sessionFactory">
+			<ref local="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- Service配置 -->
+	<bean id="statisticsService" class="cn.jbit.serviceimpl.StatisticsServiceImpl">
+		<property name="dao" ref="easybuy_CountSalesMonthDao"></property>
+	</bean>
+
+	<!-- 配置定时任务 -->
+	<!-- 配置job -->
+	<bean id="statisticsJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="statisticsService"></property>
+		<property name="targetMethod" value="ouputProduct"></property>
+	</bean>
+
+	<!-- 配置触发器 -->
+	<bean id="myTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail" ref="statisticsJob"></property>
+		<property name="cronExpression" value="0 0 23 L * ?"></property>
+	</bean>
+
+	<!-- 配置调度器 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<!-- 指定触发器 -->
+				<ref bean="myTrigger" />
+				<!-- 可以在这里添加其他的触发器 -->
+			</list>
+		</property>
+	</bean>
+</beans>

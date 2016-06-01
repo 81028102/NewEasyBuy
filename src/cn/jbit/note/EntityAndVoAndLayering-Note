@@ -1,0 +1,28 @@
+------>>关于连接数据库工具类生成实体(Entity)类、交互(Vo)类和分层(Layering)结构类   (大大减少团队开发时间,增加其开发效率)
+
+步骤一:将连接数据库所需要的jar包放进lib下面,有"小奶瓶"出现即可
+1、sqljdbc4.jar    						--连接sqlserver数据库的jar包
+2、ojdbc14.jar							--连接oracle数据库的jar包
+3、mysql-connector-java-5.1.7-bin.jar    --连接mysql数据库的jar包
+--三种数据库jar包
+步骤二:将下面的三个java文件放进entity实体包中 
+1、GenEntityMysql.java
+2、GenEntityOracle.java
+3、GenEntitySqlserver.java
+--生成entity字段类
+步骤三:将下面的三个java文件放进vo交互包中
+1、GenVoMysql.java
+2、GenVoOracle.java
+3、GenVoSqlserver.java
+--生成vo字段类
+步骤四:将下面的一个java文件放进test测试中
+1、GenLayeringAll.java
+--生成表结构类( 普通类(class) OR 接口(interface))
+
+^_^提醒:在步骤二、三、四中如果要修改包名类名,根据需要进行修改 
+例1:System.out.println("src/?/"+path.substring(path.lastIndexOf("/cn/", path.length())) );  
+例2:private String packageOutPath = "cn.jbit.entity";//指定实体生成所在包的路径  
+例3:private String tablename = "book";//表名  
+
+^_^提醒:根据不同数据库操作(运行)不同的类(即连接数据库的实体类),也可根据不同的数据库中的表子段类型来改变java中表字段类型来生成
+切记:不要重复乱运行java主方法文件(会覆盖)!!!!!!!
