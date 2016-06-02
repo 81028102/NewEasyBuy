@@ -56,7 +56,7 @@ public class easybuy_userDaoImpl extends BaseDao implements easybuy_userDao {
 	public int addUser(easybuy_user eu) {
 		// TODO Auto-generated catch block
 		//sql语句
-		String sql="insert into easybuy_user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql="insert easybuy_user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		//创建一个List集合
 		List<Object> list = new ArrayList<Object>();
 		list.add(eu.getEu_User_id());
