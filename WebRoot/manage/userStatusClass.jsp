@@ -81,9 +81,9 @@ $(function(){
 </c:if>
 </head>
 <body>
-<%session.removeAttribute("smessage"); %>
-<%session.removeAttribute("ssb"); %>
-<%session.removeAttribute("sbool"); %>
+<%session.removeAttribute("stmessage"); %>
+<%session.removeAttribute("stsb"); %>
+<%session.removeAttribute("stbool"); %>
 <div id="header" class="wrap">
 	<div id="logo"><img src="<%=request.getContextPath() %>/images/logo.gif" /></div>
 	<div class="help"><img src="<%=request.getContextPath()%>/images/home_ico.gif"/><a href="<%=request.getContextPath()%>/index.jsp">返回前台页面</a></div>

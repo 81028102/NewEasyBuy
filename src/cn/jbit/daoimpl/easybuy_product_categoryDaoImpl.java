@@ -14,13 +14,13 @@ import cn.jbit.entity.easybuy_product_category;
 @Repository
 public class easybuy_product_categoryDaoImpl extends BaseDao implements easybuy_product_categoryDao {
 
-	//声明集合对象,将easybuy_product_category表放进List集合中
-	List<easybuy_product_category> list=new ArrayList<easybuy_product_category>();
 	/**
 	 * 功能:获取一级商品分类
 	 */
 	@Override
 	public List<easybuy_product_category> getCategories(int id) {
+		//声明集合对象,将easybuy_product_category表放进List集合中
+		List<easybuy_product_category> list=new ArrayList<easybuy_product_category>();
 		//sql语句
 		String sql="select * from easybuy_product_category";
 		if(id==0){
@@ -223,6 +223,8 @@ public class easybuy_product_categoryDaoImpl extends BaseDao implements easybuy_
 	 */
 	@Override
 	public List<easybuy_product_category> getAlls(int cpage, int pageSize,String epc_name) {
+		//声明集合对象,将easybuy_product_category表放进List集合中
+		List<easybuy_product_category> list=new ArrayList<easybuy_product_category>();
 		//sql语句
 		String sql="select top "+pageSize+" * from easybuy_product_category where epc_name like ? and  epc_name not in(select top "+(cpage-1)*pageSize+" epc_name from easybuy_product_category order by epc_click_count desc) order by epc_click_count desc";
 		try {
