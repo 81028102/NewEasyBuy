@@ -41,6 +41,7 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 			user.setEu_Email(request.getParameter("email"));//获取邮箱
 			user.setEu_Address(request.getParameter("address"));//获取地址
 			user.setEu_Mobile(request.getParameter("mobile"));//获取手机号
+			user.setEu_Login(0);//获取是否登陆的信息
 			user.setEu_Status(1);//状态是否为管理员
 			user.setEu_question(request.getParameter("eu_question"));//获取问题1
 			user.setEu_answer(request.getParameter("eu_answer"));//获取答案1

@@ -8,7 +8,6 @@ import java.io.Serializable;
 @SuppressWarnings("serial")
 public class easybuy_user implements Serializable{
 	
-	private int eu_Id;					//用户编号
 	private String eu_User_id;			//用户名
 	private String eu_User_name;		//用户真实姓名
 	private String eu_Password;			//密码
@@ -119,12 +118,6 @@ public class easybuy_user implements Serializable{
 	}
 	public void setEu_answer(String eu_answer) {
 		this.eu_answer = eu_answer;
-	}
-	public int getEu_Id() {
-		return eu_Id;
-	}
-	public void setEu_Id(int eu_Id) {
-		this.eu_Id = eu_Id;
 	}
 	public String getEu_User_id() {
 		return eu_User_id;

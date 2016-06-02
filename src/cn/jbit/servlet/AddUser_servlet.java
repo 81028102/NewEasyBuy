@@ -48,6 +48,8 @@ public class AddUser_servlet extends HttpServlet {
 		user.setEu_answer2(request.getParameter("eu_answer2"));//获取答案3
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//获取系统当前时间
 		user.setEu_Create_time(sdf.format(new Date()));
+		user.setEu_Cost(0);//初始消费为0
+		user.setEu_Score(0);//初始积分为0
 		boolean flag = e.getUser(request.getParameter("userId"));//获取用户名
 		if(flag){
 			session.setAttribute("nosuccess", "该用户名已经存在！注册失败!");
