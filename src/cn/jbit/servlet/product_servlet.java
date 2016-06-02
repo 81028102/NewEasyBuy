@@ -47,7 +47,7 @@ public class product_servlet extends HttpServlet {
 		if (action.equals("first")) {
 			easybuy_productDaoImpl e = new easybuy_productDaoImpl();
 			Page p = new Page();
-			p.setPageSize(3);//展示数量为3
+			p.setPageSize(5);//展示数量为5
 			p.setCurrPageNo(1);
 			p.setTotalCount(e.getProductCount());
 			if (request.getParameter("currPage") == null) {
@@ -81,7 +81,7 @@ public class product_servlet extends HttpServlet {
 				ep_name="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=3;
+			int pageSize=5;
 			//分页查询商品销量信息
 			//查询商品销量总条数
 			int countp=e.getSalesCount(ep_name);

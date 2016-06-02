@@ -408,6 +408,7 @@ public class easybuy_newsDaoImpl extends BaseDao implements easybuy_newsDao {
 	@Override
 	public int getTypesCount(String ent_Name) {
 		// TODO Auto-generated method stub
+		//sql语句
 		String sql="select count(1) from easybuy_news_type where ent_name like '%"+ent_Name+"%'";
 		return this.getCount(sql);
 	}
@@ -452,6 +453,7 @@ public class easybuy_newsDaoImpl extends BaseDao implements easybuy_newsDao {
 	@Override
 	public int getColumnsCount(String enc_Name) {
 		// TODO Auto-generated method stub
+		//sql语句
 		String sql="select count(1) from easybuy_news_column where enc_name like '%"+enc_Name+"%'";
 		return this.getCount(sql);
 	}

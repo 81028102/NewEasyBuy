@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 
 public class GenLayeringAll {
 
-	private String tablename = "cc";//"emp";//表名
+	private String tablename = "easybuy_user_status";//例如:"emp";//表名
 	private String authorName = "任锯东";//作者名字
 
 	private String parse(String s1 ,String s2,String s3) {

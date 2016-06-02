@@ -3,14 +3,21 @@ package cn.jbit.entity;
 import java.io.Serializable;
 
 /**
- * @author 任锯东
+ * @author 任锯东	用户状态权限表
  */
 @SuppressWarnings("serial")
 public class easybuy_user_status implements Serializable{
 	
 	private int eus_Id;				//权限编号
 	private String eus_StatusName;	//权限名称
+	private String eus_Create_time;	//创建时间
 	
+	public String getEus_Create_time() {
+		return eus_Create_time;
+	}
+	public void setEus_Create_time(String eus_Create_time) {
+		this.eus_Create_time = eus_Create_time;
+	}
 	public int getEus_Id() {
 		return eus_Id;
 	}

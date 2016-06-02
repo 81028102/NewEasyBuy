@@ -3,13 +3,17 @@ package cn.jbit.servlet;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import cn.jbit.biz.easybuy_user_statusBiz;
 import cn.jbit.bizimpl.easybuy_userBizImpl;
+import cn.jbit.bizimpl.easybuy_user_statusBizImpl;
 import cn.jbit.entity.easybuy_user;
+import cn.jbit.entity.easybuy_user_status;
 import cn.jbit.util.MD5;
 
 /**
@@ -24,6 +28,9 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		// 创建用户逻辑层对象
 		easybuy_userBizImpl e = new easybuy_userBizImpl();
+		// 创建用户逻辑层对象
+		easybuy_user_statusBiz eusb=new easybuy_user_statusBizImpl();
+		HttpSession session = request.getSession();
 		// 创建用户对象
 		String action = request.getParameter("action");
 		easybuy_user user = new easybuy_user();
@@ -73,7 +80,6 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 		}if("up".equals(action)){									//检测是否有用户
 			String id = request.getParameter("id");//获取用户名
 			user = e.getEasyBuyUser(id);
-			HttpSession session = request.getSession();
 			if (user != null) {
 				session.setAttribute("user", user);
 				response.sendRedirect("manage/user-modify.jsp");//重定向到manage/user-modify.jsp页面
@@ -91,6 +97,33 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 			}else{
 				response.sendRedirect("manage/user-modify.jsp");//重定向到manage/user-modify.jsp页面
 			}
+		}
+		//查看全部状态
+		if("sstatus".equals(action)){
+			//接收cpage(当前页)
+			String cpage = request.getParameter("cpage");
+			if(cpage==null){
+				cpage="1";
+			}
+			//接收模糊查询的条件
+			String eus_StatusName = request.getParameter("eus_StatusName");//获取新闻标题
+			if(eus_StatusName==null){
+				eus_StatusName="";
+			}
+			//定义一个分页单位(pageSize)
+			int pageSize=10;
+			//查询总条数
+			int countstatus=eusb.getUser_StatusCount(eus_StatusName);
+			List<easybuy_user_status> liststatus = eusb.getUser_Status(Integer.parseInt(cpage),pageSize,eus_StatusName);
+			//计算一个总页数
+			int totalPage=(countstatus/pageSize)+(countstatus%pageSize==0?0:1);
+			//放到作用域
+			session.setAttribute("liststatus", liststatus);
+			request.setAttribute("cpage", cpage);
+			request.setAttribute("totalPage", totalPage);
+			request.setAttribute("countstatus", countstatus);
+			request.setAttribute("eus_StatusName", eus_StatusName);
+			request.getRequestDispatcher("manage/userStatusClass.jsp").forward(request, response);//转发到manage/userStatusClass.jsp页面
 		}
 	}
 }

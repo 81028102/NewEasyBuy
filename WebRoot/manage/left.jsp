@@ -12,18 +12,18 @@
 				<c:if test="${status eq 2 }">
 				<dd>
 					<em><a href="<%=request.getContextPath() %>/manage/userStatusClass-add.jsp"><img src="<%=request.getContextPath() %>/images/iadd.gif"/> 新增</a>
-					</em> <a href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=status">状态管理</a>
+					</em> <a href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=sstatus">状态管理</a>
 				</dd>
 				</c:if>
 				<c:if test="${status eq 2 }">
 				<dt>商品信息</dt>
 				<dd>
-					<em><a href="<%=request.getContextPath()%>/CategoryServlet?action=add"><img src="<%=request.getContextPath() %>/images/iadd.gif"/> 新增</a>
-					</em><a href="<%=request.getContextPath()%>/CategoryServlet?action=all">分类管理</a>
-				</dd>
-				<dd>
 					<em><a href="<%=request.getContextPath()%>/product_servlet?action=add"><img src="<%=request.getContextPath() %>/images/iadd.gif"/> 新增</a>
 					</em><a href="<%=request.getContextPath()%>/product_servlet?action=first">商品管理</a>
+				</dd>
+				<dd>
+					<em><a href="<%=request.getContextPath()%>/CategoryServlet?action=add"><img src="<%=request.getContextPath() %>/images/iadd.gif"/> 新增</a>
+					</em><a href="<%=request.getContextPath()%>/CategoryServlet?action=all">分类管理</a>
 				</dd>
 				</c:if>
 				<dt>订单信息</dt>
