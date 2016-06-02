@@ -169,9 +169,6 @@
 	</div>
 	<%@ include file="/aop.jsp"%>
 	<%@ include file="/topbottom.jsp"%>
-	<c:if test="${not empty orderList }">
-	<%@ include file="/footer-y.jsp"%>
-	</c:if>
 	<<c:if test="${empty orderList }">
 	<%@ include file="/footer-n.jsp"%>
 	</c:if>

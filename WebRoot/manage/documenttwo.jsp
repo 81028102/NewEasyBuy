@@ -115,8 +115,5 @@
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<c:if test="${not empty rlist }">
-	<%@ include file="/footer-y.jsp"%>
-	</c:if>
 </body>
 </html>

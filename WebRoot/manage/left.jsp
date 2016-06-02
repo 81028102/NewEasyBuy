@@ -10,6 +10,12 @@
 					</em><a href="<%=request.getContextPath()%>/getAllUser?action=first">用户管理</a>
 				</dd>
 				<c:if test="${status eq 2 }">
+				<dd>
+					<em><a href="<%=request.getContextPath() %>/manage/userStatusClass-add.jsp"><img src="<%=request.getContextPath() %>/images/iadd.gif"/> 新增</a>
+					</em> <a href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=status">状态管理</a>
+				</dd>
+				</c:if>
+				<c:if test="${status eq 2 }">
 				<dt>商品信息</dt>
 				<dd>
 					<em><a href="<%=request.getContextPath()%>/CategoryServlet?action=add"><img src="<%=request.getContextPath() %>/images/iadd.gif"/> 新增</a>

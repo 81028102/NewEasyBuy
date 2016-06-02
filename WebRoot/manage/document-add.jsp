@@ -125,7 +125,6 @@
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<%@ include file="/footer-n.jsp"%>
 		<c:if test="${fobool ne null }">
 		<script>
 		alert("${fobool }");

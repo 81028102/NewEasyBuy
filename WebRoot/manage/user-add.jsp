@@ -357,7 +357,6 @@ function SetRemainTime() {
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/topbottom.jsp"%>
-	<%@ include file="/footer-y.jsp"%>
 	<c:if test="${success ne null }">
 		<script>
 			alert("${success }");

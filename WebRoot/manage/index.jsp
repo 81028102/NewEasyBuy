@@ -26,15 +26,15 @@
 	<body>
 	<div id="header" class="wrap">
 		<div id="logo"><img src="<%=request.getContextPath() %>/images/logo.gif" /></div>
-		<div class="help"><img src="<%=request.getContextPath()%>/images/home_ico.gif"/><a href="<%=request.getContextPath()%>/index.jsp">${Returntothefrontdeskpage}</a></div>
+		<div class="help"><img src="<%=request.getContextPath()%>/images/home_ico.gif"/><a href="<%=request.getContextPath()%>/index.jsp">返回前台页面</a></div>
 		<div class="navbar">
 			<ul class="clearfix">
-				<li class="current"><a href="<%=request.getContextPath() %>/manage/index.jsp">${Homes}</a></li>
-				<li><a href="<%=request.getContextPath()%>/getAllUser?action=first">${Theuser}</a></li>
-				<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/product_servlet?action=first">${Goods}</a></li></c:if>
-				<li><a href="<%=request.getContextPath()%>/orderServlet?action=first">${Order }</a></li>
-				<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/commentServlet?action=first&h=hou">${Message }</a></li>
-				<li><a href="<%=request.getContextPath()%>/NewsServlet?action=first">${News}</a></li>
+				<li class="current"><a href="<%=request.getContextPath() %>/manage/index.jsp">首页</a></li>
+				<li><a href="<%=request.getContextPath()%>/getAllUser?action=first">用户</a></li>
+				<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/product_servlet?action=first">商品</a></li></c:if>
+				<li><a href="<%=request.getContextPath()%>/orderServlet?action=first">订单</a></li>
+				<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/commentServlet?action=first&h=hou">留言</a></li>
+				<li><a href="<%=request.getContextPath()%>/NewsServlet?action=first">新闻</a></li>
 				<li><a href="<%=request.getContextPath()%>/documentServlet?action=first">文档</a></li>
 				<li><a href="<%=request.getContextPath()%>/getAllUser?action=firsts">排行</a></li></c:if>
 			</ul>
@@ -44,7 +44,7 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp" %>
 		<div class="main">
-			<h2>${Managementofthehomepage}</h2>
+			<h2>管理首页</h2>
 			<div id="welcome" class="manage">
 			<br/><br/><br/><br/>
 				<div class="shadow">
@@ -61,6 +61,5 @@
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<%@ include file="/footer-n.jsp"%>
 	</body>
 	</html>

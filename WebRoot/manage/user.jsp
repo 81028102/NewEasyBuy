@@ -186,9 +186,6 @@
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<c:if test="${not empty hlist }">
-	<%@ include file="/footer-n.jsp"%>
-	</c:if>
 	<%
 		session.removeAttribute("hlist");
 	%>

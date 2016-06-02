@@ -94,7 +94,6 @@
 	</div>
 	<%@ include file="/aop.jsp"%>
 	<%@ include file="/topbottom.jsp"%>
-	<%@ include file="/footer-y.jsp"%>
 	<%
 		session.removeAttribute("cateOne");
 		session.removeAttribute("cateTwo");

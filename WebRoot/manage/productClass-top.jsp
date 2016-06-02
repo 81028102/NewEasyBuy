@@ -95,8 +95,5 @@
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<c:if test="${not empty epcList }">
-	<%@ include file="/footer-n.jsp"%>
-	</c:if>
 </body>
 </html>

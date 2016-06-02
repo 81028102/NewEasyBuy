@@ -164,9 +164,6 @@ $(function(){
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<c:if test="${not empty comments }">
-	<%@ include file="/footer-y.jsp"%>
-	</c:if>
 	 <c:if test="${message ne null }">
 		<script>
 			alert("${message }");

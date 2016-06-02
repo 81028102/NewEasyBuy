@@ -79,7 +79,6 @@
 	<div class="clear"></div>
 </div>
 <%@ include file="/aop.jsp"%>
-<%@ include file="/footer-n.jsp"%>
 <c:if test="${tmessage ne null }">
 		<script>
 			alert("${tmessage }");

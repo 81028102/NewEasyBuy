@@ -156,8 +156,5 @@ $(function(){
 	<div class="clear"></div>
 </div>
 <%@ include file="/aop.jsp"%>
-<c:if test="${not empty lists }">
-<%@ include file="/footer-n.jsp"%>
-</c:if>
 </body>
 </html>

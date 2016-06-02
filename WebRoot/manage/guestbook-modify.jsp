@@ -88,6 +88,5 @@
 	<div class="clear"></div>
 </div>
 <%@ include file="/aop.jsp"%>
-<%@ include file="/footer-n.jsp"%>
 </body>
 </html>

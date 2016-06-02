@@ -28,9 +28,11 @@ public class BaseDao {
 			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/easybuy");
 			con = ds.getConnection();
 		} catch (NamingException e) {
+			System.out.println(e.getMessage());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -50,6 +52,7 @@ public class BaseDao {
 			}
 			return ps.executeUpdate();
 		} catch (Exception e) {		
+			System.out.println(e.getMessage());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
@@ -67,6 +70,7 @@ public class BaseDao {
 			i=ps.executeUpdate();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}finally{
 			closeResource();//关闭数据库连接
@@ -91,6 +95,7 @@ public class BaseDao {
 				con.rollback();//回滚事务
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
+				System.out.println(e1.getMessage());
 				e1.printStackTrace();
 			}
 			e.printStackTrace();
@@ -122,6 +127,7 @@ public class BaseDao {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}finally{
 			closeResource();//关闭数据库连接
@@ -150,6 +156,7 @@ public class BaseDao {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}finally{
 			closeResource();//关闭数据库连接
@@ -168,6 +175,7 @@ public class BaseDao {
 			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}finally{
 			closeResource();//关闭数据库连接
@@ -184,6 +192,7 @@ public class BaseDao {
 			if(con != null)
 				con.close();
 		} catch (Exception e) {
+			System.out.println(e.getMessage());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

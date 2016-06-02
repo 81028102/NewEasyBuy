@@ -168,7 +168,6 @@ $(function(){
 		<div class="clear"></div>
 	</div>
 	<%@ include file="/aop.jsp"%>
-	<%@ include file="/footer-n.jsp"%>
 </body>
 <%-- <c:if test="${success ne null }">
 	<script>
