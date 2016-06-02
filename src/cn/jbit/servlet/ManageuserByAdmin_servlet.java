@@ -30,6 +30,8 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 		easybuy_userBizImpl e = new easybuy_userBizImpl();
 		// 创建用户逻辑层对象
 		easybuy_user_statusBiz eusb=new easybuy_user_statusBizImpl();
+		easybuy_user_status eus=new easybuy_user_status();// 初始化实体类对象
+		SimpleDateFormat sf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//获取系统当前时间 HH:mm:ss
 		HttpSession session = request.getSession();
 		// 创建用户对象
 		String action = request.getParameter("action");
@@ -124,6 +126,70 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 			request.setAttribute("countstatus", countstatus);
 			request.setAttribute("eus_StatusName", eus_StatusName);
 			request.getRequestDispatcher("manage/userStatusClass.jsp").forward(request, response);//转发到manage/userStatusClass.jsp页面
+		}
+		// 根据id删除状态
+		if (action.equals("delUser_StatusById")) {
+			int d = eusb.delUser_StatusById(request.getParameter("eus_id"));//获取分类编号
+			// 判断
+			if (d >0) {
+				request.getRequestDispatcher("ManageuserByAdmin_servlet?action=sstatus&message="+d).forward(request, response);
+			}
+		}
+		//删除全部状态
+		if(action.equals("delUser_StatusAll")){
+			int i = eusb.delUser_StatusAll();
+			// 判断
+			if (i >0) {
+				request.getRequestDispatcher("ManageuserByAdmin_servlet?action=sstatus&message="+i).forward(request, response);
+			}else{
+				request.getRequestDispatcher("ManageuserByAdmin_servlet?action=sstatus&message="+i).forward(request, response);
+			}
+		}
+		//添加分类
+		if (action.equals("addUser_Status")) {
+			String eus_statusname = request.getParameter("eus_statusname");//获取分类名称
+			eus.setEus_StatusName(eus_statusname);
+			eus.setEus_Create_time(sf.format(new Date()));//格式化系统当前时间为yyyy-MM-dd HH:mm:ss
+			if (eusb.boolStatus(eus_statusname)==false) {//判断是否存在该分类信息
+				int a = eusb.addUser_Status(eus);
+				if (a > 0) {
+					session.setAttribute("stmessage", "操作成功!");
+					response.sendRedirect("manage/userStatusClass-add.jsp");//重定向到manage/userStatusClass-add.jsp页面
+				} else {
+					session.setAttribute("stsb", "操作失败!");
+					response.sendRedirect("manage/userStatusClass-add.jsp");//重定向到manage/userStatusClass-add.jsp页面
+				}
+			}else{
+				session.setAttribute("stbool", "已经存在该状态信息,不需要多次添加!");
+				response.sendRedirect("manage/userStatusClass-add.jsp");//重定向到manage/userStatusClass-add.jsp页面
+			}
+		}	
+		//根据id回显状态信息
+		if(action.equals("getUser_StatusById")){
+			easybuy_user_status statuss = eusb.getUser_StatusById(Integer.parseInt(request.getParameter("eus_id")));//获取分类编号
+			session.setAttribute("statuss", statuss);
+			request.getRequestDispatcher("manage/userStatusClass-modify.jsp").forward(request, response);//转发到manage/userStatusClass-modify.jsp页面
+		}
+		//更新状态信息
+		if(action.equals("updateUser_Status")){
+			String oldeus_statusname=request.getParameter("oldeus_statusname");//获取"老"状态名称
+			eus.setEus_Id(Integer.parseInt(request.getParameter("eus_id")));//获取状态编号
+			String eus_statusname = request.getParameter("eus_statusname");//获取"新"状态名称
+			eus.setEus_StatusName(eus_statusname);//获取分类名称
+			eus.setEus_Create_time(sf.format(new Date()));//格式化系统当前时间为yyyy-MM-dd HH:mm:ss
+			if (eusb.boolStatus(eus_statusname)==false||oldeus_statusname.equals(eus_statusname)) {//判断是否存在该状态信息
+				int i = eusb.updateUser_Status(eus);
+				if(i>0){
+					session.setAttribute("stmessage", "操作成功!");
+					response.sendRedirect("manage/userStatusClass-modify.jsp");//重定向到manage/userStatusClass-modify.jsp页面
+				} else {
+					session.setAttribute("stsb", "操作失败!");
+					response.sendRedirect("manage/userStatusClass-modify.jsp");//重定向到manage/userStatusClass-modify.jsp页面
+				}
+			}else{
+				session.setAttribute("stbool", "已经存在该分类信息,不需要多次添加!");
+				response.sendRedirect("manage/userStatusClass-modify.jsp");//重定向到manage/userStatusClass-modify.jsp页面
+			}
 		}
 	}
 }

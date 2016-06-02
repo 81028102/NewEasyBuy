@@ -69,7 +69,7 @@ public class easybuy_user_statusDaoImpl extends BaseDao implements easybuy_user_
 	public int delUser_StatusById(String eus_Id) {
 		// TODO Auto-generated method stub
 		//sql语句
-		String sql="delete from easybuy_user_status where ent_id in("+eus_Id+")";
+		String sql="delete from easybuy_user_status where eus_id in("+eus_Id+")";
 		return this.executeSql(sql);
 	}
 

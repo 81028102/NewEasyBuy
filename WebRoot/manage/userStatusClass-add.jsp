@@ -17,13 +17,14 @@
 	n++;
 	if(n==3){n=1;}
 	if(n==1){document.title="EasyBuy";}
-	if(n==2){document.title="轻松购 - 栏目管理";}
+	if(n==2){document.title="轻松购 - 状态管理";}
 	setTimeout("title()",1000);
 	}
 	title();
 </script>
 </head>
 <body>
+<%session.removeAttribute("message"); %>
 	<div id="header" class="wrap">
 		<div id="logo">
 			<img src="<%=request.getContextPath()%>/images/logo.gif" />
@@ -35,11 +36,11 @@
 		<div class="navbar">
 			<ul class="clearfix">
 				<li><a href="<%=request.getContextPath()%>/manage/index.jsp">首页</a></li>
-				<li><a href="<%=request.getContextPath()%>/getAllUser?action=first">用户</a></li>
+				<li class="current"><a href="<%=request.getContextPath()%>/getAllUser?action=first">用户</a></li>
 				<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/product_servlet?action=first">商品</a></li></c:if>
 				<li><a href="<%=request.getContextPath()%>/orderServlet?action=first">订单</a></li>
 				<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/manage/guestbook.jsp">留言</a></li>
-				<li class="current"><a href="<%=request.getContextPath()%>/manage/news.jsp">新闻</a></li>
+				<li><a href="<%=request.getContextPath()%>/manage/news.jsp">新闻</a></li>
 				<li><a href="<%=request.getContextPath()%>/documentServlet?action=first">文档</a></li>
 				<li><a href="<%=request.getContextPath()%>/getAllUser?action=firsts">排行</a></li></c:if>
 			</ul>
@@ -49,24 +50,24 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加栏目</h2>
+			<h2>添加状态</h2>
 			<div class="manage">
-				<form id="newsColumnClass-add"
-					action="<%=request.getContextPath()%>/NewsServlet?action=addNewColumn"
+				<form id="userStatusClass-add"
+					action="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=addUser_Status"
 					method="post" onsubmit="return check()">
 					<table class="form">
 						<tr>
-							<td class="field">栏目名称:</td>
-							<td><input type="text" class="text" id="enc_name" name="enc_name"
-								value="" placeholder="请输入栏目名称" autocomplete="off" />
+							<td class="field">状态名称:</td>
+							<td><input type="text" class="text" id="eus_statusname" name="eus_statusname"
+								value="" placeholder="请输入状态名称" autocomplete="off" />
 							<span></span></td>
 						</tr>
 						<tr>
 							<td></td>
 							<td><label class="ui-blue"><input type="submit"
-									class="point" name="submit" value="添加栏目" /> </label> <label class="ui-blue"><input type="reset" class="point" value="清空"/></label> <label
+									class="point" name="submit" value="添加状态" /> </label> <label class="ui-blue"><input type="reset" class="point" value="清空"/></label> <label
 								class="ui-blue"><a
-									href="<%=request.getContextPath()%>/NewsServlet?action=columns"><input
+									href="<%=request.getContextPath()%>/NewsServlet?action=sstatus"><input
 										type="button" name="button" class="point" value="返回" /> </a> </label>
 							</td>
 						</tr>
@@ -78,20 +79,20 @@
 
 	</div>
 	<%@ include file="/aop.jsp"%>
-<c:if test="${cmessage ne null }">
-		<script>
-			alert("${cmessage }");
-			location.href = "<%=request.getContextPath()%>/NewsServlet?action=columns";
-		</script>
-	</c:if>
-	<c:if test="${cbool ne null }">
-		<script>
-		alert("${cbool }");
+<c:if test="${stmessage ne null }">
+	<script>
+		alert("${stmessage }");
+		location.href = "<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=sstatus";
 	</script>
 	</c:if>
-	<c:if test="${csb ne null }">
-		<script>
-		alert("${csb }");
+	<c:if test="${stbool ne null }">
+	<script>
+		alert("${stbool }");
+	</script>
+	</c:if>
+	<c:if test="${stsb ne null }">
+	<script>
+		alert("${stsb }");
 	</script>
 </c:if>
 </body>

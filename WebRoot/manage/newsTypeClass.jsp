@@ -105,7 +105,7 @@ $(function(){
 	<%@ include file="left.jsp" %>
 	
 	<div class="main">
-		<h2>新闻管理<a style="color: red;text-decoration: none;margin-left: 410px;">温馨提示:请谨慎删除,删除后不可恢复哦!</a></h2>
+		<h2>分类管理<a style="color: red;text-decoration: none;margin-left: 410px;">温馨提示:请谨慎删除,删除后不可恢复哦!</a></h2>
 		<div class="manage">
 		<form action="<%=request.getContextPath()%>/NewsServlet?action=types" method="post">
 			<table style="margin-left: -11px;"><tr align="right"><td>

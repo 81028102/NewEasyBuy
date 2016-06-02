@@ -17,7 +17,7 @@
 	n++;
 	if(n==3){n=1;}
 	if(n==1){document.title="EasyBuy";}
-	if(n==2){document.title="轻松购 - 新闻管理";}
+	if(n==2){document.title="轻松购 - 分类管理";}
 	setTimeout("title()",1000);
 	}
 	title();

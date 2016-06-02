@@ -44,10 +44,10 @@ $(function(){
 		$(".cks:checked").each(function(){
 			id+=","+$(this).val();
 		});
-		enc_Id=id.substring(1);
-		if(enc_Id!=""){
+		eus_Id=id.substring(1);
+		if(eus_Id!=""){
 			if(confirm("确定要删除吗?请谨慎删除哦!")){
-				location.href="<%=request.getContextPath() %>/NewsServlet?action=delNewsColumnById&enc_id="+enc_Id;
+				location.href="<%=request.getContextPath() %>/ManageuserByAdmin_servlet?action=delUser_StatusById&eus_id="+eus_Id;
 			}
 		}else{
 			alert("对不起,请指定删除!");
@@ -64,7 +64,7 @@ $(function(){
 	n++;
 	if(n==3){n=1;}
 	if(n==1){document.title="EasyBuy";}
-	if(n==2){document.title="轻松购 - 栏目管理";}
+	if(n==2){document.title="轻松购 - 状态管理";}
 	setTimeout("title()",1000);
 	}
 	title();
@@ -105,7 +105,7 @@ $(function(){
 	<%@ include file="left.jsp" %>
 	
 	<div class="main">
-		<h2>用户管理<a style="color: red;text-decoration: none;margin-left: 410px;">温馨提示:请谨慎删除,删除后不可恢复哦!</a></h2>
+		<h2>状态管理<a style="color: red;text-decoration: none;margin-left: 410px;">温馨提示:请谨慎删除,删除后不可恢复哦!</a></h2>
 		<div class="manage">
 		<form action="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=sstatus" method="post">
 			<table style="margin-left: -11px;"><tr align="right"><td>
@@ -116,7 +116,7 @@ $(function(){
   			<c:if test="${not empty liststatus }">
 				<table><tr  align="left"><td><label class="ui-blue"><input type="button" value="反选" id="fx" class="point"/></lable></td>  <td><label class="ui-blue"><input type="button"
 				value="全选/全不选" id="x" class="point"/></label></td>  <td><label class="ui-blue"><input type="button" value="批量删除"
-				id="delete" class="point"/></label></td> <td><label class="ui-blue"><a class="manageDel" href="<%=request.getContextPath() %>/ManageuserByAdmin_servlet?action=delNewsColumnAll" style="text-decoration:none;"><input type="button" style="color:orange;" value="删除全部" class="point"/></a></label></td></tr></table>
+				id="delete" class="point"/></label></td> <td><label class="ui-blue"><a class="manageDel" href="<%=request.getContextPath() %>/ManageuserByAdmin_servlet?action=delUser_StatusAll" style="text-decoration:none;"><input type="button" style="color:orange;" value="删除全部" class="point"/></a></label></td></tr></table>
 				</c:if>
 			<table class="list">
 			<tr>	
@@ -134,8 +134,8 @@ $(function(){
 					<td style="text-align:center;">${i.eus_StatusName }</td>
 					<td style="text-align:center;">${i.eus_Create_time }</td>
 					<td style="text-align:center;">
-					<label class="ui-blue"><a class="manageUpd" href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=getNewsColumnById&eus_id=${i.eus_Id }"><input type="button" class="point" value="修改"/></a></label>
-					<label class="ui-blue"><a class="manageDel" href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=delNewsColumnById&eus_id=${i.eus_Id }"><input type="button" class="point" value="删除"/></a></label></td>
+					<label class="ui-blue"><a class="manageUpd" href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=getUser_StatusById&eus_id=${i.eus_Id }"><input type="button" class="point" value="修改"/></a></label>
+					<label class="ui-blue"><a class="manageDel" href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=delUser_StatusById&eus_id=${i.eus_Id }"><input type="button" class="point" value="删除"/></a></label></td>
 				</tr>
 				</c:forEach>
     	 <tr>
