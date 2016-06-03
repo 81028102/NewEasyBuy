@@ -1,0 +1,12 @@
+------>>关于Ant配置
+
+步骤一:首先去网上下载Ant文件配置,我这里使用的是(apache-ant-1.9.5)
+步骤二:配置环境变量 新建一个 变量名:ANT_HOME 变量值:C:\Program Files (x86)\apache-ant-1.9.5(放置路径)
+步骤三:选中NewEasyBuy工程，然后选择“Project”，“Properties”，“Builders”，“New…”，选择“Ant Build”：
+步骤四:window-->show view-->将ant选出
+步骤五:项目右键-->Export-->General-->Ant Buildfiles(生成默认的build.xml文件内容)
+
+Apache Ant,是一个将软件编译、测试、部署等步骤联系在一起加以自动化的一个工具，大多用于Java环境中的软件开发。
+　　Ant是由一个内置任务和可选任务组成的。Ant运行时需要一个XML文件(构建文件)。 
+   Ant通过调用target树，就可以执行各种task。每个task实现了特定接口对象。由于Ant构建文件 是XML格式的文件，所以很容易维护和书写，而且结构很清晰。
+　　Ant可以集成到开发环境中。由于Ant的跨平台性和操作简单的特点，它很容易集成到一些开发环 境中去。 

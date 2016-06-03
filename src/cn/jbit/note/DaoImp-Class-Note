@@ -1,4 +1,4 @@
------->>关于daoimpl类对象的事
+------>>关于daoimpl类对象
 
 new对象list的时候最好在不同的实现方法中声明集合对象,
 //声明集合对象,将easybuy_product_category表放进List集合中
