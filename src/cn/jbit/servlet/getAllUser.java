@@ -43,7 +43,7 @@ public class getAllUser extends HttpServlet {
 					eu_user_id="";
 				}
 				//定义一个分页单位(pageSize)
-				int pageSize=10;
+				int pageSize=12;
 				//分页查询用户信息
 				//查询用户总条数
 				int count=e.getUserCount(eu_user_id);
@@ -71,7 +71,7 @@ public class getAllUser extends HttpServlet {
 				eu_user_id="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=10;
+			int pageSize=15;
 			//分页查询用户消费信息
 			//查询用户消费总条数
 			int countc=e.getConsumeCount(eu_user_id);

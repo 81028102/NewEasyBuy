@@ -113,7 +113,7 @@ public class ManageuserByAdmin_servlet extends HttpServlet {
 				eus_StatusName="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=10;
+			int pageSize=15;
 			//查询总条数
 			int countstatus=eusb.getUser_StatusCount(eus_StatusName);
 			List<easybuy_user_status> liststatus = eusb.getUser_Status(Integer.parseInt(cpage),pageSize,eus_StatusName);

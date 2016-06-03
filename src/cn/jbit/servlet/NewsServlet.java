@@ -46,7 +46,7 @@ public class NewsServlet extends HttpServlet {
 				en_Title="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=11;
+			int pageSize=15;
 			//查询总条数
 			int counttt=news.getNewsCount(en_Title);
 			//调用service  getList
@@ -102,7 +102,7 @@ public class NewsServlet extends HttpServlet {
 				en_Title="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=11;
+			int pageSize=15;
 			//查询总条数
 			int countne=news.getNewsCount(en_Title);
 			//调用service  getList
@@ -208,7 +208,7 @@ public class NewsServlet extends HttpServlet {
 				ent_Name="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=10;
+			int pageSize=15;
 			//查询总条数
 			int countype=news.getTypesCount(ent_Name);
 			List<easybuy_news_type> listype = news.getNews_Type(Integer.parseInt(cpage),pageSize,ent_Name);
@@ -235,7 +235,7 @@ public class NewsServlet extends HttpServlet {
 				enc_Name="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=10;
+			int pageSize=15;
 			//查询总条数
 			int countColumn=news.getColumnsCount(enc_Name);
 			List<easybuy_news_column> listColumn = news.getNews_Column(Integer.parseInt(cpage),pageSize,enc_Name);

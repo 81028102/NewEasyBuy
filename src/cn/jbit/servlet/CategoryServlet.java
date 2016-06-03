@@ -50,7 +50,7 @@ public class CategoryServlet extends HttpServlet {
 				epc_name="";
 			}
 			//定义一个分页单位(pageSize)
-			int pageSize=12;
+			int pageSize=15;
 			//分页查询分类信息
 			//查询分类总条数
 			int countepc=epcb.getCategoryCount(epc_name);
