@@ -10,3 +10,6 @@ Apache Ant,是一个将软件编译、测试、部署等步骤联系在一起加
 　　Ant是由一个内置任务和可选任务组成的。Ant运行时需要一个XML文件(构建文件)。 
    Ant通过调用target树，就可以执行各种task。每个task实现了特定接口对象。由于Ant构建文件 是XML格式的文件，所以很容易维护和书写，而且结构很清晰。
 　　Ant可以集成到开发环境中。由于Ant的跨平台性和操作简单的特点，它很容易集成到一些开发环 境中去。 
+
+
+buildPackage.xml报错 需要加入tomcat的servlet-api.jar

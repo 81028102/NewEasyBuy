@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="buildPackage" default="all" basedir=".">
+
+<!-- 定义目录变量 -->
+
+<property name="src.dir" value="${basedir}/src" />
+
+<property name="classes.dir" value="WebRoot/WEB-INF/classes" />
+
+<property name="lib.dir" value="WebRoot/WEB-INF/lib" />
+
+<property name="WebRoot.dir" value="WebRoot" />
+
+<!--用于输出的临时文件夹与打包的文件夹-->
+
+<property name="temp.dir" value="C:\temp" />
+
+<!--对于不同环境的war包，使用不同的配置文件-->
+<tstamp>
+<format property="now.time" pattern="yyyy-MM-dd" locale="zh"/>
+</tstamp>
+<!-- 定义classpath -->
+<path id="master-classpath">
+<fileset file="${lib.dir}/*.jar" />
+<pathelement path="${classes.dir}" />
+</path>
+
+<target name="clean">
+<delete dir="${temp.dir}" />
+<delete dir="${classes.dir}" />
+<delete file="${temp.dir}/开发/ROOT.war"/>
+</target>
+
+<!-- 初始化任务 -->
+<target name="init" depends="clean">
+</target>
+
+<!-- 编译 -->
+<target name="compile" depends="init" description="compile the source files">
+<mkdir dir="${temp.dir}/${now.time}开发" />
+<mkdir dir="${classes.dir}" />
+
+<javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true" encoding="UTF-8">
+<classpath refid="master-classpath" />
+</javac>
+
+<copy todir="${temp.dir}/${now.time}开发" overwrite="true">
+<fileset dir="${WebRoot.dir}">
+<include name="**/**" />
+</fileset>
+<fileset dir="${src.dir}" excludes="**/*.Java">
+</fileset>
+</copy>
+
+</target>
+
+<!--打包-->
+<target name="war" depends="compile">
+<mkdir dir="${temp.dir}/${now.time}开发" />
+<jar jarfile="${temp.dir}/${now.time}-ROOT.war">
+<fileset dir="${temp.dir}/${now.time}开发">
+<include name="**/*" />
+</fileset>
+</jar>
+</target>
+
+<target name="all" depends="war">
+<delete dir="${classes.dir}" />
+</target>
+
+</project>
