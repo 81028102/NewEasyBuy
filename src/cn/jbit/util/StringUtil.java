@@ -20,9 +20,9 @@ public class StringUtil {
 	}
 
 	/**
-	 * ×ª»»×Ö½ÚÊı×éÎª16½øÖÆ×Ö´®
-	 * @param b ×Ö½ÚÊı×é
-	 * @return 16½øÖÆ×Ö´®
+	 * è½¬æ¢å­—èŠ‚æ•°ç»„ä¸º16è¿›åˆ¶å­—ä¸²
+	 * @param b å­—èŠ‚æ•°ç»„
+	 * @return 16è¿›åˆ¶å­—ä¸²
 	 */
 	public static String byteArrayToHexString(byte[] b) {
 		StringBuffer resultSb = new StringBuffer();

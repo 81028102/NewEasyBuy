@@ -1,216 +1,71 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="NewEasyBuy">
-    <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../../AppData/Local/MyEclipse/MyEclipse 10"/>
-    <property name="junit.output.dir" value="junit"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.7"/>
-    <property name="source" value="1.7"/>
-    <path id="Java EE 6 Libraries.libraryclasspath">
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/bean-validator.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.annotation.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.ejb.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.enterprise.deploy.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.jms.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.management.j2ee.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.persistence.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.resource.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.security.auth.message.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.security.jacc.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.servlet.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.servlet.jsp.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.servlet.jsp.jstl.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/javax.transaction.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/jaxb-api-osgi.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/jsf-api.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/jsf-impl.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/jsr311-api.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/jstl-impl.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/mail.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/webservices-api-osgi.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/com.genuitec.eclipse.j2eedt.core_10.5.0.me201207171805/data/libraryset/EE_6/weld-osgi-bundle.jar"/>
-    </path>
-    <path id="Web App Libraries.libraryclasspath">
-        <pathelement location="WebRoot/WEB-INF/lib/MyString.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/antlr-2.7.6.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/asm-attrs.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/asm.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/cglib-2.2.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-beanutils-1.7.0.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-codec-1.9.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-collections-3.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-fileupload-1.3.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-httpclient.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-io-2.4.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-lang-2.3.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-lang3-3.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-logging-1.1.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/commons-logging.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/dom4j-1.6.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/ehcache-1.2.3.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/ezmorph-1.0.6.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/freemarker-2.3.19.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/hibernate3.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/imageinfo-1.9.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/jackson-annotations-2.2.0.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/jackson-core-2.2.0.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/jackson-databind-2.2.0.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/javassist-3.9.0.GA.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/javax.mail.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/jdom.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/json-lib-2.4-jdk15.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/json.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/json_simple-1.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/jta-1.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/jta.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/log4j-1.2.17.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/mysql-connector-java-5.1.7-bin.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/ognl-3.0.6.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/ojdbc14.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.aop-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.asm-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.aspects-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.beans-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.context-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.context.support-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.core-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.expression-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.instrument-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.instrument.tomcat-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.jdbc-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.jms-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.orm-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.oxm-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.test-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.transaction-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.web-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.web.portlet-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.web.servlet-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/org.springframework.web.struts-3.1.1.RELEASE.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/quartz-all-1.8.6.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/slf4j-simple-1.5.2.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/sqljdbc4.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/standard.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/struts2-core-2.3.4.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/struts2-dojo-plugin-2.1.8.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/struts2-json-plugin-2.3.4.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/struts2-spring-plugin-2.3.4.1.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/ueditor-1.1.2.jar"/>
-        <pathelement location="WebRoot/WEB-INF/lib/xwork-core-2.3.4.jar"/>
-    </path>
-    <path id="JUnit 4.libraryclasspath">
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/org.junit_4.8.2.v4_8_2_v20110321-1705/junit.jar"/>
-        <pathelement location="../../../AppData/Local/MyEclipse/Common/plugins/org.hamcrest.core_1.1.0.v20090501071000.jar"/>
-    </path>
-    <path id="NewEasyBuy.classpath">
-        <pathelement location="WebRoot/WEB-INF/classes"/>
-        <path refid="Java EE 6 Libraries.libraryclasspath"/>
-        <path refid="Web App Libraries.libraryclasspath"/>
-        <path refid="JUnit 4.libraryclasspath"/>
-    </path>
-    <path id="run.GenEntitySqlserver (1).bootclasspath">
-        <path refid="Java EE 6 Libraries.libraryclasspath"/>
-        <fileset dir="${java.home}/lib" includes="*.jar"/>
-        <fileset dir="${java.home}/lib/ext" includes="*.jar"/>
-    </path>
-    <path id="run.GenLayeringAll (2).bootclasspath">
-        <path refid="Java EE 6 Libraries.libraryclasspath"/>
-        <fileset dir="${java.home}/lib" includes="*.jar"/>
-        <fileset dir="${java.home}/lib/ext" includes="*.jar"/>
-    </path>
-    <path id="run.TestOpen (1).bootclasspath">
-        <path refid="Java EE 6 Libraries.libraryclasspath"/>
-        <fileset dir="${java.home}/lib" includes="*.jar"/>
-        <fileset dir="${java.home}/lib/ext" includes="*.jar"/>
-    </path>
-    <path id="run.NewEasyBuy.bootclasspath">
-        <path refid="Java EE 6 Libraries.libraryclasspath"/>
-        <fileset dir="${java.home}/lib" includes="*.jar"/>
-        <fileset dir="${java.home}/lib/ext" includes="*.jar"/>
-    </path>
-    <target name="init">
-        <mkdir dir="WebRoot/WEB-INF/classes"/>
-        <copy includeemptydirs="false" todir="WebRoot/WEB-INF/classes">
-            <fileset dir="src">
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="clean">
-        <delete dir="WebRoot/WEB-INF/classes"/>
-    </target>
-    <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects"/>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="WebRoot/WEB-INF/classes" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="NewEasyBuy.classpath"/>
-        </javac>
-    </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
-        <copy todir="${ant.library.dir}">
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </copy>
-        <unzip dest="${ant.library.dir}">
-            <patternset includes="jdtCompilerAdapter.jar"/>
-            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
-        </unzip>
-    </target>
-    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
-        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
-        <antcall target="build"/>
-    </target>
-    <target name="GenEntitySqlserver (1)">
-        <java classname="cn.jbit.entity.GenEntitySqlserver" failonerror="true" fork="yes">
-            <classpath refid="NewEasyBuy.classpath"/>
-            <bootclasspath>
-                <path refid="run.GenEntitySqlserver (1).bootclasspath"/>
-            </bootclasspath>
-        </java>
-    </target>
-    <target name="GenLayeringAll (2)">
-        <java classname="cn.jbit.test.GenLayeringAll" failonerror="true" fork="yes">
-            <classpath refid="NewEasyBuy.classpath"/>
-            <bootclasspath>
-                <path refid="run.GenLayeringAll (2).bootclasspath"/>
-            </bootclasspath>
-        </java>
-    </target>
-    <target name="TestOpen (1)">
-        <java classname="cn.jbit.test.TestOpen" failonerror="true" fork="yes">
-            <classpath refid="NewEasyBuy.classpath"/>
-            <bootclasspath>
-                <path refid="run.TestOpen (1).bootclasspath"/>
-            </bootclasspath>
-        </java>
-    </target>
-    <target name="NewEasyBuy">
-        <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
-            <formatter type="xml"/>
-            <classpath refid="NewEasyBuy.classpath"/>
-            <bootclasspath>
-                <path refid="run.NewEasyBuy.bootclasspath"/>
-            </bootclasspath>
-        </junit>
-    </target>
-    <target name="junitreport">
-        <junitreport todir="${junit.output.dir}">
-            <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
-            </fileset>
-            <report format="frames" todir="${junit.output.dir}"/>
-        </junitreport>
-    </target>
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="NewEasyBuy" default="all" basedir=".">
+
+<!-- 定义目录变量 -->
+
+<property name="src.dir" value="${basedir}/src" />
+
+<property name="classes.dir" value="WebRoot/WEB-INF/classes" />
+
+<property name="lib.dir" value="WebRoot/WEB-INF/lib" />
+
+<property name="WebRoot.dir" value="WebRoot" />
+
+<!--用于输出的临时文件夹与打包的文件夹-->
+
+<property name="temp.dir" value="C:\temp" />
+
+<!--对于不同环境的war包，使用不同的配置文件-->
+<tstamp>
+<format property="now.time" pattern="yyyy-MM-dd" locale="zh"/>
+</tstamp>
+<!-- 定义classpath -->
+<path id="master-classpath">
+<fileset file="${lib.dir}/*.jar" />
+<pathelement path="${classes.dir}" />
+</path>
+
+<target name="clean">
+<delete dir="${temp.dir}" />
+<delete dir="${classes.dir}" />
+<delete file="${temp.dir}/开发/ROOT.war"/>
+</target>
+
+<!-- 初始化任务 -->
+<target name="init" depends="clean">
+</target>
+
+<!-- 编译 -->
+<target name="compile" depends="init" description="compile the source files">
+<mkdir dir="${temp.dir}/${now.time}开发" />
+<mkdir dir="${classes.dir}" />
+
+<javac srcdir="${src.dir}" destdir="${classes.dir}" debug="true" encoding="UTF-8">
+<classpath refid="master-classpath" />
+</javac>
+
+<copy todir="${temp.dir}/${now.time}开发" overwrite="true">
+<fileset dir="${WebRoot.dir}">
+<include name="**/**" />
+</fileset>
+<fileset dir="${src.dir}" excludes="**/*.Java">
+</fileset>
+</copy>
+
+</target>
+
+<!--打包-->
+<target name="war" depends="compile">
+<mkdir dir="${temp.dir}/${now.time}开发" />
+<jar jarfile="${temp.dir}/${now.time}-ROOT.war">
+<fileset dir="${temp.dir}/${now.time}开发">
+<include name="**/*" />
+</fileset>
+</jar>
+</target>
+
+<target name="all" depends="war">
+<delete dir="${classes.dir}" />
+</target>
+
 </project>
