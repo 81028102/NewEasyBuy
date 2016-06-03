@@ -50,7 +50,7 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加状态</h2>
+			<h2>新增状态</h2>
 			<div class="manage">
 				<form id="userStatusClass-add"
 					action="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=addUser_Status"
@@ -67,7 +67,7 @@
 							<td><label class="ui-blue"><input type="submit"
 									class="point" name="submit" value="添加状态" /> </label> <label class="ui-blue"><input type="reset" class="point" value="清空"/></label> <label
 								class="ui-blue"><a
-									href="<%=request.getContextPath()%>/NewsServlet?action=sstatus"><input
+									href="<%=request.getContextPath()%>/ManageuserByAdmin_servlet?action=sstatus"><input
 										type="button" name="button" class="point" value="返回" /> </a> </label>
 							</td>
 						</tr>

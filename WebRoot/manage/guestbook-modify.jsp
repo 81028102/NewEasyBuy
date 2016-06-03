@@ -55,7 +55,7 @@
 <div id="main" class="wrap">
 	<%@ include file="left.jsp" %>
 	<div class="main">
-		<h2>回复留言</h2>
+		<h2><c:if test="${eccomment.ec_Reply eq null }">回复留言</c:if><c:if test="${eccomment.ec_Reply ne null }">修改留言</c:if></h2>
 		<div class="manage">
 			<form id="guestbook-modify" action="<%=request.getContextPath() %>/commentServlet?action=update&ec_id=${eccomment.ec_Id }" method="post">
 				<table class="form">

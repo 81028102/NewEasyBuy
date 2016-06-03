@@ -41,11 +41,11 @@
 	<div class="navbar">
 		<ul class="clearfix">
 			<li><a href="<%=request.getContextPath() %>/manage/index.jsp" >首页</a></li>
-			<li><a href="<%=request.getContextPath()%>/getAllUser?action=first" >用户</a></li>
+			<li class="current"><a href="<%=request.getContextPath()%>/getAllUser?action=first" >用户</a></li>
 			<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath() %>/product_servlet?action=first" >商品</a></li></c:if>
 			<li><a href="<%=request.getContextPath()%>/orderServlet?action=first" >订单</a></li>
 			<c:if test="${status eq 2 }"><li><a href="<%=request.getContextPath()%>/commentServlet?action=allComment&h=hou" >留言</a></li>
-			<li class="current"><a href="<%=request.getContextPath()%>/NewsServlet?action=first">新闻</a></li>
+			<li><a href="<%=request.getContextPath()%>/NewsServlet?action=first">新闻</a></li>
 			<li><a href="<%=request.getContextPath()%>/documentServlet?action=first">文档</a></li>
 			<li><a href="<%=request.getContextPath()%>/getAllUser?action=firsts">排行</a></li></c:if>
 		</ul>

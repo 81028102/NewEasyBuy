@@ -86,7 +86,7 @@ $(function(){
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加新闻</h2>
+			<h2>新增新闻</h2>
 			<div class="manage">
 				<form id="news-add"
 					action="<%=request.getContextPath()%>/NewsServlet?action=add"

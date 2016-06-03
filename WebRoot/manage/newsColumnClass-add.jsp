@@ -49,7 +49,7 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加栏目</h2>
+			<h2>新增栏目</h2>
 			<div class="manage">
 				<form id="newsColumnClass-add"
 					action="<%=request.getContextPath()%>/NewsServlet?action=addNewColumn"

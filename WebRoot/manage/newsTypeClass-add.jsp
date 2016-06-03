@@ -50,7 +50,7 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加分类</h2>
+			<h2>新增分类</h2>
 			<div class="manage">
 				<form id="newsTypeClass-add"
 					action="<%=request.getContextPath()%>/NewsServlet?action=addNewType"

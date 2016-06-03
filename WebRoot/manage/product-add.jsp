@@ -166,7 +166,7 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加商品</h2>
+			<h2>新增商品</h2>
 			<div class="manage">
 				<form id="product-add" action="<%=request.getContextPath()%>/product_servlet?action=add" method="post"
 					enctype="multipart/form-data">

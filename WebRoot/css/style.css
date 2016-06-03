@@ -146,9 +146,18 @@ a:hover, a:active { color:#3a52a8; text-decoration:underline; }
 
 #newsTypeClass-modify table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
 #newsTypeClass-modify table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }
+#newsTypeClass-add table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
+#newsTypeClass-add table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }
  
 #newsColumnClass-modify table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
 #newsColumnClass-modify table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }
+#newsColumnClass-add table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
+#newsColumnClass-add table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }
+
+#userStatusClass-modify table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
+#userStatusClass-modify table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }
+#userStatusClass-add table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
+#userStatusClass-add table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }
 
 #main .main #sendemail table td span { display:none; vertical-align:middle; margin-left:10px; padding-left:22px; padding-right:10px; background:url(../images/bg.png) -232px -63px no-repeat; }
 #main .main #sendemail table td span.error { display:inline-block; border:1px solid #ff835a; background-color:#ffe8e0; }

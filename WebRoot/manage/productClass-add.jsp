@@ -52,7 +52,7 @@
 	<div id="main" class="wrap">
 		<%@ include file="left.jsp"%>
 		<div class="main">
-			<h2>添加分类</h2>
+			<h2>新增分类</h2>
 			<div class="manage">
 				<form id="productClass-add" action="<%=request.getContextPath()%>/CategoryServlet?action=add" method="post">
 					<table class="form">

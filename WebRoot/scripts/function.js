@@ -412,6 +412,16 @@ $(function() {
 				isError = false;
 			}
 			break; 
+			//用户状态
+		case "eus_statusname":
+			if (value == "") {
+				errorMessage = "状态名称不能为空";
+			}else if(value.length>6||value.length<2){
+				errorMessage = "状态名称长度为2~6个字";
+			}else {
+				isError = false;
+			}
+			break; 
 		default:
 			isError = false;
 		break;
@@ -735,7 +745,15 @@ $(function() {
 			checkItem(this);
 		}
 	});
-
+	//用户状态
+	$("#eus_statusname").bind({
+		focus : function() {
+			focusItem(this);
+		},
+		blur : function() {
+			checkItem(this);
+		}
+	});
 
 	//安全
 	$("#safe").bind({
@@ -819,10 +837,18 @@ $(function() {
 	$("#document").submit(checkForm);
 	//新闻添加
 	$("#news-add").submit(checkForm);
-	//新闻分类
+	//新闻分类修改
 	$("#newsTypeClass-modify").submit(checkForm);
-	//新闻栏目
+	//新闻分类添加
+	$("#newsTypeClass-add").submit(checkForm);
+	//新闻栏目修改
 	$("#newsColumnClass-modify").submit(checkForm);
+	//新闻栏目添加
+	$("#newsColumnClass-add").submit(checkForm);
+	//用户状态修改
+	$("#userStatusClass-modify").submit(checkForm);
+	//用户状态添加
+	$("#userStatusClass-add").submit(checkForm);
 
 	// 添加新地址事件
 	$("#addr").click(function() {
