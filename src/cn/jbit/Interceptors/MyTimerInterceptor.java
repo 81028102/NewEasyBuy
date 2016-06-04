@@ -19,10 +19,12 @@ public class MyTimerInterceptor extends AbstractInterceptor{
 		if(object1!=null&&object2!=null){
 			long startTime=System.currentTimeMillis();
 			System.out.println("------->>>开始时间:"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(startTime));
+			System.out.println("在action执行之前");
 			String result=invo.invoke();
 			long endTime=System.currentTimeMillis();
 			System.out.println("------->>>结束时间:"+new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(endTime));
 			long execTime=endTime-startTime;
+			System.out.println("在Result运行之后");
 			System.out.println("------->>>所用时间:"+execTime+" ms");
 			return result;
 		}else{
