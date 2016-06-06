@@ -20,7 +20,7 @@ public class BaseDao {
 	private static String driver = 
 			"com.microsoft.sqlserver.jdbc.SQLServerDriver";// 数据库驱动字符串
 	private static String url = 
-			"jdbc:sqlserver://localhost:1048;DatabaseName=epet";// 连接URL字符串
+			"jdbc:sqlserver://localhost:1434;DatabaseName=easybuy";// 连接URL字符串
 	private static String user = "sa"; // 数据库用户名
 	private static String password = "sa"; // 用户密码
 	public Connection con = null;
@@ -42,14 +42,12 @@ public class BaseDao {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}*/
-		if(con==null){
-			// 获取连接并捕获异常
-			try {
-				Class.forName(driver);
-				con = DriverManager.getConnection(url, user, password);
-			} catch (Exception e) {
-				e.printStackTrace();// 异常处理
-			}
+		// 获取连接并捕获异常
+		try {
+			Class.forName(driver);
+			con = DriverManager.getConnection(url, user, password);
+		} catch (Exception e) {
+			e.printStackTrace();// 异常处理
 		}
 		return con;// 返回连接对象
 	}	
