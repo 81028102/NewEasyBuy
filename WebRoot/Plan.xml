@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<deployment-plan xmlns="http://xmlns.oracle.com/weblogic/deployment-plan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/deployment-plan http://xmlns.oracle.com/weblogic/deployment-plan/1.0/deployment-plan.xsd" global-variables="false">
+  <application-name>WebRoot</application-name>
+  <variable-definition>
+    <variable>
+      <name>SessionDescriptor_invalidationIntervalSecs_14652153000700</name>
+      <value>3000</value>
+    </variable>
+    <variable>
+      <name>Logging_logFilename_14652156516950</name>
+      <value>NewEasyBuy</value>
+    </variable>
+    <variable>
+      <name>ContainerDescriptor_minimumNativeFileSize_14652157427960</name>
+      <value>4096</value>
+    </variable>
+  </variable-definition>
+  <module-override>
+    <module-name>WebRoot</module-name>
+    <module-type>war</module-type>
+    <module-descriptor external="true">
+      <root-element>weblogic-web-app</root-element>
+      <uri>WEB-INF/weblogic.xml</uri>
+      <variable-assignment>
+        <name>SessionDescriptor_invalidationIntervalSecs_14652153000700</name>
+        <xpath>/weblogic-web-app/session-descriptor/invalidation-interval-secs</xpath>
+      </variable-assignment>
+      <variable-assignment>
+        <name>Logging_logFilename_14652156516950</name>
+        <xpath>/weblogic-web-app/logging/log-filename</xpath>
+      </variable-assignment>
+      <variable-assignment>
+        <name>ContainerDescriptor_minimumNativeFileSize_14652157427960</name>
+        <xpath>/weblogic-web-app/container-descriptor/minimum-native-file-size</xpath>
+      </variable-assignment>
+      <hash-code>1465215992749</hash-code>
+    </module-descriptor>
+    <module-descriptor external="false">
+      <root-element>web-app</root-element>
+      <uri>WEB-INF/web.xml</uri>
+    </module-descriptor>
+    <module-descriptor external="true">
+      <root-element>wldf-resource</root-element>
+      <uri>META-INF/weblogic-diagnostics.xml</uri>
+      <hash-code>1465215660236</hash-code>
+    </module-descriptor>
+  </module-override>
+  <config-root>C:\Users\pc\Desktop\xx\NewEasyBuy\plan</config-root>
+</deployment-plan>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<weblogic-web-app xmlns="http://xmlns.oracle.com/weblogic/weblogic-web-app" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.3/weblogic-web-app.xsd">
+  <session-descriptor>
+    <invalidation-interval-secs>3000</invalidation-interval-secs>
+  </session-descriptor>
+  <jsp-descriptor></jsp-descriptor>
+  <container-descriptor>
+    <minimum-native-file-size>4096000</minimum-native-file-size>
+  </container-descriptor>
+  <logging>
+    <log-filename>NewEasyBuy</log-filename>
+  </logging>
+</weblogic-web-app>

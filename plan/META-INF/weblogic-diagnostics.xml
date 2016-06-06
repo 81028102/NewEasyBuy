@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wldf-resource xmlns="http://xmlns.oracle.com/weblogic/weblogic-diagnostics" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-diagnostics http://xmlns.oracle.com/weblogic/weblogic-diagnostics/1.0/weblogic-diagnostics.xsd">
+  <instrumentation>
+    <enabled>true</enabled>
+  </instrumentation>
+</wldf-resource>
