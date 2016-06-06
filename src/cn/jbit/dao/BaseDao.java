@@ -1,29 +1,35 @@
 package cn.jbit.dao;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.util.ArrayList;
 import java.util.List;
-import javax.naming.Context;
+/*import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.sql.DataSource;
+import javax.sql.DataSource;*/
 import org.apache.commons.beanutils.BeanUtils;
 
 /**
  * @author 任锯东
  */
 public class BaseDao {
-
-	protected Connection con = null;
-	protected PreparedStatement ps = null;
-	protected ResultSet rs = null;
+	private static String driver = 
+			"com.microsoft.sqlserver.jdbc.SQLServerDriver";// 数据库驱动字符串
+	private static String url = 
+			"jdbc:sqlserver://localhost:1048;DatabaseName=epet";// 连接URL字符串
+	private static String user = "sa"; // 数据库用户名
+	private static String password = "sa"; // 用户密码
+	public Connection con = null;
+	public PreparedStatement ps = null;
+	public ResultSet rs = null;
 
 	//获取数据库连接
-	protected void openConnection(){
-		try {
+	public Connection openConnection(){
+		/*	try {
 			Context ctx = new InitialContext();
 			DataSource ds = (DataSource)ctx.lookup("java:comp/env/jdbc/easybuy");
 			con = ds.getConnection();
@@ -35,7 +41,17 @@ public class BaseDao {
 			System.out.println(e.getMessage());
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		}*/
+		if(con==null){
+			// 获取连接并捕获异常
+			try {
+				Class.forName(driver);
+				con = DriverManager.getConnection(url, user, password);
+			} catch (Exception e) {
+				e.printStackTrace();// 异常处理
+			}
 		}
+		return con;// 返回连接对象
 	}	
 
 	//更新新据库
