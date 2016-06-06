@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 	<display-name></display-name>
 	<!-- 默认的开始访问页面 -->
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
 	</welcome-file-list>
    <!-- struts2的配置文件 -->
   <filter>
@@ -192,12 +195,6 @@
   <servlet>
     <description>This is the description of my J2EE component</description>
     <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>MyFilterTestServlet</servlet-name>
-    <servlet-class>cn.jbit.servlet.MyFilterTestServlet</servlet-class>
-  </servlet>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
     <servlet-name>payServlet</servlet-name>
     <servlet-class>cn.jbit.servlet.payServlet</servlet-class>
   </servlet>
@@ -316,10 +313,6 @@
   <servlet-mapping>
     <servlet-name>forgetssServlet</servlet-name>
     <url-pattern>/forgetssServlet</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>MyFilterTestServlet</servlet-name>
-    <url-pattern>/MyFilterTestServlet</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
     <servlet-name>payServlet</servlet-name>
