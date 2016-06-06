@@ -59,6 +59,8 @@
 	// 输出图象到页面  
 	ImageIO.write(image, "JPEG", response.getOutputStream());
 	//out.clear();//防止报异常(tomcat下误删除)
+	/* out.clearBuffer(),weblogic */
 	out = pageContext.pushBody();
-	response.reset(); //图片就能显示出来 
+	response.redirect();
+	//response.reset(); //图片就能显示出来 
 %>
