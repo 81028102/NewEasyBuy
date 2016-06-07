@@ -5,7 +5,7 @@
   </session-descriptor>
   <jsp-descriptor></jsp-descriptor>
   <container-descriptor>
-    <minimum-native-file-size>4096000</minimum-native-file-size>
+    <minimum-native-file-size>4096</minimum-native-file-size>
   </container-descriptor>
   <logging>
     <log-filename>NewEasyBuy</log-filename>
