@@ -51,7 +51,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<th>${Purchasequantity}</th>
 						<th>${Operation}</th>
 					</tr>
-					<c:forEach var="m" items="${shop[keySet]}" varStatus="s">
+					<c:forEach items="${shop[keySet]}" var="m"  varStatus="s">
 					<tr id="product_id_0">
 						<td class="thumb"><img src="${m.ep_File_name}" /><a href="<%=request.getContextPath()%>/productServlet?action=look&ep_id=${m.ep_Id}">${m.ep_Name}</a></td>
 						<td class="price" style="color:black;">￥${m.ep_Price/shop[m]}</td>
