@@ -14,6 +14,14 @@
       <name>ContainerDescriptor_minimumNativeFileSize_14652157427960</name>
       <value>4096</value>
     </variable>
+    <variable>
+      <name>JspDescriptor_pageCheckSeconds_14653876840650</name>
+      <value>-1</value>
+    </variable>
+    <variable>
+      <name>JspDescriptor_verbose_14653889195850</name>
+      <value>false</value>
+    </variable>
   </variable-definition>
   <module-override>
     <module-name>WebRoot</module-name>
@@ -33,7 +41,15 @@
         <name>ContainerDescriptor_minimumNativeFileSize_14652157427960</name>
         <xpath>/weblogic-web-app/container-descriptor/minimum-native-file-size</xpath>
       </variable-assignment>
-      <hash-code>1465215992749</hash-code>
+      <variable-assignment>
+        <name>JspDescriptor_pageCheckSeconds_14653876840650</name>
+        <xpath>/weblogic-web-app/jsp-descriptor/page-check-seconds</xpath>
+      </variable-assignment>
+      <variable-assignment>
+        <name>JspDescriptor_verbose_14653889195850</name>
+        <xpath>/weblogic-web-app/jsp-descriptor/verbose</xpath>
+      </variable-assignment>
+      <hash-code>1465388919585</hash-code>
     </module-descriptor>
     <module-descriptor external="false">
       <root-element>web-app</root-element>

@@ -13,7 +13,6 @@
 		return new Color(r, g, b);
 	}%>
 <%
-	//response.reset(); //图片就能显示出来(在weblogic中将二维码的一个reset加到最前面)
 	//设置页面不缓存  
 	response.setHeader("Pragma", "No-cache");
 	response.setHeader("Cache-Control", "no-cache");
@@ -59,7 +58,6 @@
 	g.dispose();
 	// 输出图象到页面  
 	ImageIO.write(image, "JPEG", response.getOutputStream());
-	out.clear();//防止报异常(tomcat下误删除)war包下注释这两行
+	out.clear();
 	out = pageContext.pushBody();
-	
 %>

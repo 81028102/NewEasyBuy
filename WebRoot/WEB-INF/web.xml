@@ -38,12 +38,12 @@
       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
    </listener>
   <!-- JNDI数据库连接池配置信息 -->
-	<resource-ref>
+	<!-- <resource-ref>
         <description>news DataSource</description >
         <res-ref-name>jdbc/neweasybuy</res-ref-name>
         <res-type>javax.sql.DataSource</res-type>
         <res-auth>Container</res-auth>
-    </resource-ref>
+    </resource-ref> -->
   <!-- 过滤UTF-8编码配置信息 -->
 	<filter>
 		<filter-name>EncodeFilter</filter-name>
