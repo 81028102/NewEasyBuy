@@ -50,20 +50,20 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 						<th>${Purchasequantity}</th>
 						<th>${Operation}</th>
 					</tr>
-					<c:forEach var="m" items="${shop}" varStatus="s">
+					<c:forEach var="m" items="${shop.keySet()}" varStatus="s">
 					<tr id="product_id_0">
-						<td class="thumb"><img src="${m.value.ep_File_name}" /><a href="<%=request.getContextPath()%>/productServlet?action=look&ep_id=${m.value.ep_Id}">${m.value.ep_Name}</a></td>
-						<td class="price" style="color:black;">￥${m.value.ep_Price/shop[m]}</td>
+						<td class="thumb"><img src="${m.ep_File_name}" /><a href="<%=request.getContextPath()%>/productServlet?action=look&ep_id=${m.ep_Id}">${m.ep_Name}</a></td>
+						<td class="price" style="color:black;">￥${m.ep_Price/shop.get(m)}</td>
 						<td class="price" id="price_id_0">
-							<span>￥${m.value.ep_Price}</span>
-							<input type="hidden" value="${m.value.ep_Price/shop[m]}" />
+							<span>￥${m.ep_Price}</span>
+							<input type="hidden" value="${m.ep_Price/shop.get(m)}" />
 						</td>
 						<td class="number">
-                        	<span name="del"><a href="<%=request.getContextPath()%>/shoppingServlet?action=minus&ep_id=${m.value.ep_Id}" style="text-decoration:none;">-</a></span>
-                        	<input id="number_id_0" type="text" name="number" value="${shop[m]}" />
-                        	<span name="add"><a href="<%=request.getContextPath()%>/shoppingServlet?action=add&ep_id=${m.value.ep_Id}" style="text-decoration:none;">+</a></span>
+                        	<span name="del"><a href="<%=request.getContextPath()%>/shoppingServlet?action=minus&ep_id=${m.ep_Id}" style="text-decoration:none;">-</a></span>
+                        	<input id="number_id_0" type="text" name="number" value="${shop.get(m)}" />
+                        	<span name="add"><a href="<%=request.getContextPath()%>/shoppingServlet?action=add&ep_id=${m.ep_Id}" style="text-decoration:none;">+</a></span>
 						</td>
-						<td class="delete"><a href="<%=request.getContextPath()%>/shoppingServlet?action=del&ep=${m.value.ep_Id}">${Delete}</a></td>
+						<td class="delete"><a href="<%=request.getContextPath()%>/shoppingServlet?action=del&ep=${m.ep_Id}">${Delete}</a></td>
 					</tr>
 					</c:forEach>
 				</table>
