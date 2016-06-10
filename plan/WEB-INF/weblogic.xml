@@ -11,7 +11,7 @@
     <servlet-reload-check-secs>-1</servlet-reload-check-secs>
     <prefer-web-inf-classes>true</prefer-web-inf-classes>
     <minimum-native-file-size>4096</minimum-native-file-size>
-  </container-descriptor>
+  </container-descriptor> 
   <logging>
     <log-filename>NewEasyBuy</log-filename>
   </logging>
