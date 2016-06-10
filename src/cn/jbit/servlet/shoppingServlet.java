@@ -106,8 +106,8 @@ public class shoppingServlet extends HttpServlet {
 		}
 		//放到作用域中
 		session.setAttribute("shop",shop);
-		//request.getRequestDispatcher("shopping.jsp").forward(request, response);
-		response.sendRedirect("shopping.jsp");//重定向到shopping.jsp页面
+		request.getRequestDispatcher("shopping.jsp").forward(request, response);
+		//response.sendRedirect("shopping.jsp");//重定向到shopping.jsp页面
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
