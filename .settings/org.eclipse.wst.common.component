@@ -3,6 +3,7 @@
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebRoot/photo"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/config"/>
         <property name="context-root" value="/NewEasyBuy"/>
         <property name="java-output-path" value="/NewEasyBuy/WebRoot/WEB-INF/classes"/>
     </wb-module>
