@@ -25,7 +25,7 @@
 	</bean>
 
 	<!-- sqlserver数据库配置 -->
-	<bean id="dataSource"
+<!-- 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver">
 		</property>
@@ -34,7 +34,7 @@
 		</property>
 		<property name="username" value="sa"></property>
 		<property name="password" value="sa"></property>
-	</bean>
+	</bean> -->
 
 	<!-- oracle数据库配置 -->
 	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
@@ -53,9 +53,9 @@
 	<!-- Hibernate二级缓存配置 -->
 	<bean id="sessionFactory"
 		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
-		<property name="dataSource">
+		<!--  <property name="dataSource">
 			<ref bean="dataSource" />
-		</property>
+		</property> -->
 		<property name="hibernateProperties">
 			<props>
 				<prop key="hibernate.dialect">
