@@ -53,7 +53,7 @@ public class shoppingServlet extends HttpServlet {
 				shop=new HashMap<easybuy_product, Integer>();
 			}
 			boolean flag=false;
-			//Iteator迭代器遍历
+			//Iterator迭代器遍历
 			Iterator<Entry<easybuy_product, Integer>> iter=shop.entrySet().iterator();
 			while (iter.hasNext()) {
 				Map.Entry<easybuy_product, Integer> entry=(Map.Entry<easybuy_product, Integer>)iter.next();
