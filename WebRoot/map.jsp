@@ -19,7 +19,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 var map =new BMap.Map("container");
 var point =new BMap.Point(116.404, 39.915);
 map.centerAndZoom(point, 14);
-var myIcon =new BMap.Icon("http://dev.baidu.com/wiki/static/map/API/examples/images/Mario.png", new BMap.Size(32, 70), {    //小车图片
+var myIcon =new BMap.Icon("<%=request.getContextPath() %>/images/github.gif", new BMap.Size(32, 70), {    //小车图片
     offset: new BMap.Size(0, -5),    //相当于CSS精灵
     imageOffset: new BMap.Size(0, 0)    //图片的偏移量。为了是图片底部中心对准坐标点。
   });
@@ -51,15 +51,15 @@ map.addOverlay(marker0);
 map.setViewport(points);         //调整地图的最佳视野为显示标注数组point
 
 var opts1 = {title : '<span style="font-size:14px;color:#0A8021">如家快捷酒店</span>'};
-var opts2 = {title : '<span style="font-size:14px;color:#0A8021">昆仑大厦</span>'};
-var opts3 = {title : '<span style="font-size:14px;color:#0A8021">华夏银行</span>'};
+var opts2 = {title : '<span style="font-size:14px;color:#0A8021">昆仑酒店</span>'};
+var opts3 = {title : '<span style="font-size:14px;color:#0A8021">华夏小吃</span>'};
 var opts4 = {title : '<span style="font-size:14px;color:#0A8021">成都小吃</span>'};
 var opts5 = {title : '<span style="font-size:14px;color:#0A8021">锦绣大饭店</span>'};
 var opts6 = {title : '<span style="font-size:14px;color:#0A8021">七天快捷酒店</span>'};
 var opts7 = {title : '<span style="font-size:14px;color:#0A8021">中央民族大学</span>'};
-var opts8 = {title : '<span style="font-size:14px;color:#0A8021">昌平汽车专修学院</span>'};
-var opts9 = {title : '<span style="font-size:14px;color:#0A8021">百度大厦</span>'};
-var opts0 = {title : '<span style="font-size:14px;color:#0A8021">海尔电器销售点</span>'};
+var opts8 = {title : '<span style="font-size:14px;color:#0A8021">哇哈哈路鲜鱼</span>'};
+var opts9 = {title : '<span style="font-size:14px;color:#0A8021">百度酒店</span>'};
+var opts0 = {title : '<span style="font-size:14px;color:#0A8021">驴肉火烧</span>'};
 
 var infoWindow1 =new BMap.InfoWindow("<div style='line-height:1.8em;font-size:12px;'><b>地址:</b>北京市朝阳区高碑店小学旁</br><b>电话:</b>010-59921010</br><b>口碑：</b><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><a style='text-decoration:none;color:#2679BA;float:right' href='#'>详情>></a></div>", opts1);  // 创建信息窗口对象，引号里可以书写任意的html语句。
 var infoWindow2 =new BMap.InfoWindow("<div style='line-height:1.8em;font-size:12px;'><b>地址:</b>北京市海淀区紫竹院123号</br><b>电话:</b>010-59921010</br><b>口碑：</b><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><img src='http://cdn2.iconfinder.com/data/icons/diagona/icon/16/031.png' /><a style='text-decoration:none;color:#2679BA;float:right' href='#'>详情>></a></div>", opts2);

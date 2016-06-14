@@ -162,7 +162,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<option value="-1">${rpleasechoose}</option>
 			</select> <select id="country">
 				<option value="-1">${rpleasechoose}</option>
-			</select> <br/><br/><img src="images/light.gif"/>&nbsp;&nbsp;&nbsp;${raddress}:(${Canalsoaddnewaddress},${Pro})<input
+			</select> <br/><br/><img src="<%=request.getContextPath() %>/images/light.gif"/>&nbsp;&nbsp;&nbsp;${raddress}:(${Canalsoaddnewaddress},${Pro})<input
 				name="addr" id="addr" type="button" value="添加新地址" /><span id="span"></span>
 			</td></tr>
 				<tr><td><c:if test="${address ne null }">
