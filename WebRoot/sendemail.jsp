@@ -159,7 +159,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</table>
 				<s:token></s:token>
 			</form>
-			<%@ include file="mvc.jsp"%>
 			<%@ include file="qrcode.jsp"%>
 			<%@ include file="topbottom.jsp"%>
 		</div>
