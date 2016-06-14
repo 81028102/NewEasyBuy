@@ -61,6 +61,7 @@ document.oncontextmenu = noMenuOne;
 	</tr>
 </table>
 </form>
+<%@ include file="mvc.jsp"%>
 <%@ include file="aop.jsp" %>
 <%@ include file="footer-n.jsp"%>
 </body>

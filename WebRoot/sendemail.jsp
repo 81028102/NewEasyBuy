@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="/struts-tags" prefix="s"%>
 <%
 	String path = request.getContextPath();
@@ -159,6 +159,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				</table>
 				<s:token></s:token>
 			</form>
+			<%@ include file="mvc.jsp"%>
 			<%@ include file="qrcode.jsp"%>
 			<%@ include file="topbottom.jsp"%>
 		</div>

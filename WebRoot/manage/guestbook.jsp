@@ -163,6 +163,7 @@ $(function(){
 		</div>
 		<div class="clear"></div>
 	</div>
+	<%@ include file="/mvc.jsp"%>
 	<%@ include file="/aop.jsp"%>
 	 <c:if test="${message ne null }">
 		<script>

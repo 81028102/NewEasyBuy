@@ -90,6 +90,7 @@ if(confirm("确认返回吗？")){
 			</tr>
 		</table>
 	</form>
+	<%@ include file="mvc.jsp"%>
 	<%@ include file="aop.jsp"%>
 	<%@ include file="footer-n.jsp"%>
 </body>

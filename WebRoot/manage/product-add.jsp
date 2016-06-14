@@ -249,6 +249,7 @@
 			</div>
 		</div>
 		<div class="clear"></div>
+		<%@ include file="/mvc.jsp"%>
 		<%@ include file="/aop.jsp"%>
 </body>
 </html>

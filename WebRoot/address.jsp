@@ -192,6 +192,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<div class="wrap">
 		<div id="shopping"></div>
 	</div>
+	<%@ include file="mvc.jsp"%>
 	<%@ include file="aop.jsp"%>
 	<%@ include file="qrcode.jsp" %>
 	<%@ include file="topbottom.jsp" %>

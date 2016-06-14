@@ -356,6 +356,7 @@ function SetRemainTime() {
 		</div>
 		<div class="clear"></div>
 	</div>
+	<%@ include file="/mvc.jsp"%>
 	<%@ include file="/topbottom.jsp"%>
 	<c:if test="${success ne null }">
 		<script>

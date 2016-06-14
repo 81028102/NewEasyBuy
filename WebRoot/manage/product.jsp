@@ -151,6 +151,7 @@
 		<%@ include file="hpage.jsp"%>
 		</c:if>
 	</div>
+	<%@ include file="/mvc.jsp"%>
 	<%@ include file="/aop.jsp"%>
 </body>
 </html>

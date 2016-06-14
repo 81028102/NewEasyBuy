@@ -49,6 +49,7 @@
 				</form></td>
 		</tr>
 	</table>
+	<%@ include file="mvc.jsp"%>
 	<%@ include file="aop.jsp"%>
 	<%@ include file="footer-n.jsp"%>
 </body>

@@ -86,6 +86,7 @@
 		</div>
 		<div class="clear"></div>
 	</div>
+	<%@ include file="/mvc.jsp"%>
 	<%@ include file="/aop.jsp"%>
 	<c:if test="${amessage ne null }">
 		<script>

@@ -103,6 +103,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			session.removeAttribute("nosuccess");
 		%>
 	</c:if>
+	<%@ include file="mvc.jsp"%>
 	<%@ include file="aop.jsp"%>
 	<%@ include file="footer-n.jsp"%>
 <script>

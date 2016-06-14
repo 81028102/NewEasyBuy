@@ -230,6 +230,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 <!-- 	<div id="daiyanbao_com_content" closerate="1" playrate="0" style="position: fixed;_position: absolute;text-align: left;overflow: visible;bottom :0px;left:0px;display:block; z-index:999;"><script src="//res.daiyanbao.com/freevideojs/hy2014_5/1/15139769986.js"></script></div>
  -->	
+ 	<%@ include file="mvc.jsp"%>
  	<%@ include file="aop.jsp"%>
 	<%@ include file="qrcode.jsp" %>
 	<%@ include file="services.jsp" %>

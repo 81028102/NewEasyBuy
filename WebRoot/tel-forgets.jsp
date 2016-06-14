@@ -135,6 +135,7 @@ function SetRemainTime() {
 		</div>
 		<div class="clear"></div>
 	</div>
+	<%@ include file="mvc.jsp"%>
 	<%@ include file="footer-n.jsp"%>
 </body>
 </html>

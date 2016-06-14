@@ -73,6 +73,7 @@
 			</div>
 		<div class="clear"></div>
 		</div>
+		<%@ include file="mvc.jsp"%>
 		<%@ include file="aop.jsp"%>
 		<%@ include file="footer-n.jsp"%>
 </body>

@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 <head>
-<script type="text/javascript" src="scripts/jquery-1.8.3.js"></script>
+<script type="text/javascript" src="<%=request.getContextPath() %>/scripts/jquery-1.8.3.js"></script>
 <script type="text/javascript">
 	function around(obj, prop, advice) {
 		var exist = obj[prop];
@@ -26,7 +26,7 @@
 				//exist = null;
 				//obj = null;
 			}
-		}
+		};
 	}
 	var count = 1;
 	advice = function(originalFunc) {
@@ -35,14 +35,14 @@
 			console.log("before function " + current);
 			originalFunc.apply(this, arguments);
 			console.log("after function " + current);
-		}
-	}
+		};
+	};
 	var obj = {
 		foo : function(arg) {
 			console.log(this.name + " and " + arg);
 		},
 		name : "obj"
-	}
+	};
 	h1 = around(obj, "foo", advice);
 	h2 = around(obj, "foo", advice);
 	obj.foo("aop");
