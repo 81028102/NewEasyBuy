@@ -99,7 +99,6 @@ function returns(){
 	</form>
 	</div>
 	<div class="clear"></div>
-	<%@ include file="mvc.jsp"%>
 	<%@ include file="topbottom.jsp" %>
 </body>
 </html>
