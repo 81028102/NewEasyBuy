@@ -112,8 +112,8 @@
 						href="<%=request.getContextPath() %>/indexServlet?action=category&category=one&epc_id=${one.epc_Id}&epc=${one.epc_Name }">${one.epc_Name}</a>
 					</li>
 				</c:forEach>
-				<li><a href="<%=request.getContextPath()%>/supersearch.jsp">${Quicktoenter}</a>
-				</li>
+				<li><a href="<%=request.getContextPath()%>/supersearch.jsp">${Quicktoenter}</a></li>
+				<li><a href="<%=request.getContextPath()%>/map.jsp">附近美食</a></li>
 				<c:if test="${status eq 2 }"><img src="<%=request.getContextPath() %>/images/manage.png"/>&nbsp;${Manage}</c:if>
 				<c:if test="${status eq 1 }"><img src="<%=request.getContextPath() %>/images/user.png"/></c:if>&nbsp;
 				<c:if test="${not empty login }">
