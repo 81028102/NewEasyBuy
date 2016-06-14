@@ -1,7 +1,8 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <html>
 <head>
-<script type="text/javascript" src="<%=request.getContextPath() %>/scripts/jquery-1.8.3.js"></script>
+<script type="text/javascript"
+	src="<%=request.getContextPath()%>/scripts/jquery-1.8.3.js"></script>
 <script type="text/javascript">
 	function around(obj, prop, advice) {
 		var exist = obj[prop];
