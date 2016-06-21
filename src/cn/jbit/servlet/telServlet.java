@@ -2,6 +2,7 @@ package cn.jbit.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,7 @@ import org.dom4j.Element;
  * @author 任锯东
  */
 @SuppressWarnings("serial")
+@WebServlet("/telServlet")
 public class telServlet extends HttpServlet {
 
 	private static String Url = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
