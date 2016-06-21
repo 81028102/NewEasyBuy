@@ -5,7 +5,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,7 +20,6 @@ import cn.jbit.util.MD5;
  * @author 任锯东
  */
 @SuppressWarnings("serial")
-@WebServlet("/ManageuserByAdmin_servlet")
 public class ManageuserByAdmin_servlet extends HttpServlet {
 
 	@Override

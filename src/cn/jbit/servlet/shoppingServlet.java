@@ -8,7 +8,6 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Map.Entry;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,7 +29,6 @@ import cn.jbit.entity.easybuy_user;
  * @author 任锯东
  */
 @SuppressWarnings("serial")
-@WebServlet("/shoppingServlet")
 public class shoppingServlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)

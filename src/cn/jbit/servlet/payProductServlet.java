@@ -2,7 +2,6 @@ package cn.jbit.servlet;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,7 +14,6 @@ import cn.jbit.util.PaymentUtil;
  * @author 任锯东 支付系统
  */
 @SuppressWarnings("serial")
-@WebServlet("/payProductServlet")
 public class payProductServlet extends HttpServlet {
 
 	@Override
