@@ -10,6 +10,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -32,6 +33,7 @@ import cn.jbit.util.Page;
  * @author 任锯东
  */
 @SuppressWarnings("serial")
+@WebServlet("/product_servlet")
 public class product_servlet extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)

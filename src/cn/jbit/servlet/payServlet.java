@@ -3,6 +3,7 @@ package cn.jbit.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,6 +15,7 @@ import cn.jbit.util.MD5;
  * @author 任锯东 支付系统
  */
 @SuppressWarnings("serial")
+@WebServlet("/payServlet")
 public class payServlet extends HttpServlet {
 
 	private String eu_user_name;

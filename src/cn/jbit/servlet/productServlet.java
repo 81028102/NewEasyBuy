@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,9 +19,10 @@ import cn.jbit.entity.easybuy_assess;
 import cn.jbit.entity.easybuy_product;
 
 /**
- * @author 任锯东
+ * @author 任锯东 
  */
 @SuppressWarnings("serial")
+@WebServlet("/productServlet")
 public class productServlet extends HttpServlet {
 
 	@Override
