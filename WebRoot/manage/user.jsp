@@ -8,6 +8,8 @@
 <link type="text/css" rel="stylesheet" 
 	href="<%=request.getContextPath()%>/css/style.css" />
 <script type="text/javascript" 
+	src="<%=request.getContextPath()%>/FusionCharts/Charts/FusionCharts.js"></script>
+<script type="text/javascript" 
 	src="<%=request.getContextPath()%>/scripts/jquery-1.8.3.js"></script>
 <script type="text/javascript" 
 	src="<%=request.getContextPath()%>/scripts/function.js"></script>
@@ -26,6 +28,24 @@
 	setTimeout("title()",1000);
 	}
 	title();
+	/* 数据报表 */
+	var _gfqyChart = new FusionCharts("${pageContext.request.contextPath }/FusionCharts/Charts/Pie3D.swf", "_gfqyChart", "600", "400", "0", "0");
+		function hh(){
+			var json='${json}';
+			var list=eval("("+json+")");
+			bb(_gfqyChart,"tb",list);
+		};
+		
+		function bb(Chart,type,list){
+			var chart = "";
+			chart = "<chart palette='2' formatNumberScale='0' chartLeftMargin='2'  paletteColors='B2D8F8,AC8ACA,3973B3,3973B3,3973B3'  showBorder='1' borderColor='#BEBEBE' chartTopMargin='5' chartBottomMargin='0' captionPadding='0' formatNumberScale='0'  bgColor=\"FF00CC\" rotateYAxisName='0' yAxisNamePadding='0' yAxisName='会员积分' xaxisname='用户名' caption='' baseFontSize='12' baseFontColor='black' outCnvBaseFontSize='12'  labelDisplay='WRAP'>";
+			for (var i = 0; i < list.length; i++) {
+				chart += "<set label='"+list[i].eu_User_name+"' value='" + list[i].eu_Score + "'/>";
+			}
+			chart += "</chart>";
+			Chart.setDataXML(chart);
+			Chart.render(type);
+		};
 </script>
 <c:if test="${param.message eq 1}">
 	<script>
@@ -43,7 +63,7 @@
 	</script>
 </c:if>
 </head>
-<body>
+<body onload="hh();">
 	<div id="header" class="wrap">
 		<div id="logo">
 			<img src="<%=request.getContextPath() %>/images/logo.gif" />
@@ -94,7 +114,7 @@
 					<tr><th align="right">对不起没有找到该用户</th></tr>
 					</c:if> --%>
 					<c:if test="${not empty hlist }">
-					<c:forEach var="user" items="${hlist}">
+					<c:forEach items="${hlist}" var="user">
 						<tr>
 							<td><a href="#"><img src="<%=request.getContextPath()%>/images/user.jpg" title="头像" alt="头像"/></a></td>
 							<td class="first w4 c">${user.eu_User_id}</td>
@@ -190,6 +210,6 @@
 	<%
 		session.removeAttribute("hlist");
 	%>
-
+	<div id="tb" style="text-align:center;"></div>
 </body>
 </html>

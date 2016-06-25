@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import cn.jbit.bizimpl.easybuy_userBizImpl;
 import cn.jbit.entity.easybuy_user;
+import cn.jbit.util.JsonUtil;
 
 /**
  * @author 任锯东
@@ -54,6 +55,8 @@ public class getAllUser extends HttpServlet {
 				List<easybuy_user> list=e.getAllUser(Integer.parseInt(cpage),pageSize,eu_user_id);
 				//放到作用域中
 				request.getSession().setAttribute("hlist",list);
+				String json = JsonUtil.toJson(list);
+				request.setAttribute("json", json);
 				request.setAttribute("cpage", cpage);
 				request.setAttribute("totalPage", totalPage);
 				request.setAttribute("count", count);

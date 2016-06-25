@@ -47,6 +47,7 @@ public class JsonUtil {
 			str= mapper.writeValueAsString(obj);
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		return str;
@@ -69,11 +70,12 @@ public class JsonUtil {
 			str= mapper.writeValueAsString(obj);
 		} catch (JsonProcessingException e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
 			System.out.println(e.getMessage());
+			e.printStackTrace();
 		}
 		return str;
 	}
@@ -187,12 +189,15 @@ public class JsonUtil {
 			field.set(entity,value);
 		} catch (IllegalArgumentException e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		} catch (IllegalAccessException e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}	
 	}
@@ -205,12 +210,15 @@ public class JsonUtil {
 			fieldValue = field.get(entity);
 		} catch (IllegalArgumentException e1) {
 			// TODO Auto-generated catch block
+			System.out.println(e1.getMessage());
 			e1.printStackTrace();
 		} catch (IllegalAccessException e1) {
 			// TODO Auto-generated catch block
+			System.out.println(e1.getMessage());
 			e1.printStackTrace();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}	
 		return fieldValue;
