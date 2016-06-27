@@ -1,10 +1,14 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东 手机找回密码实体类
  */
+@Entity
+@Table(name="easybuy_tel")
 @SuppressWarnings("serial")
 public class easybuy_tel implements Serializable{
 	

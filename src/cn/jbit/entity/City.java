@@ -1,10 +1,15 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东
  */
+
+@Entity
+@Table(name="city")
 @SuppressWarnings("serial")
 public class City implements Serializable{
 	

@@ -2,10 +2,14 @@ package cn.jbit.entity;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东    商品实体类
  */
+@Entity
+@Table(name="easybuy_countproduct")
 @SuppressWarnings("serial")
 public class easybuy_countproduct implements Serializable{
 

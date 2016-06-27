@@ -1,10 +1,14 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东   订单状态类(待审核,审核通过,配货,发货,收货确认)
  */
+@Entity
+@Table(name="easybuy_order_status")
 @SuppressWarnings("serial")
 public class easybuy_order_status implements Serializable{
 	

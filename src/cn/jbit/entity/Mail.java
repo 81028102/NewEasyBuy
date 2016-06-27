@@ -1,9 +1,14 @@
 package cn.jbit.entity;
 
 import java.io.File;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 /**
  * @author 任锯东 邮箱实体类
  */
+@Entity
+@Table(name="Mail")
 public class Mail {
 	
 	private String from;		//发件人邮箱

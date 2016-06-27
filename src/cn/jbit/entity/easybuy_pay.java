@@ -1,10 +1,14 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东 支付实体类
  */
+@Entity
+@Table(name="easybuy_bank")
 @SuppressWarnings("serial")
 public class easybuy_pay implements Serializable {
 	

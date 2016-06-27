@@ -1,10 +1,14 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东	用户状态权限表
  */
+@Entity
+@Table(name="easybuy_user_status")
 @SuppressWarnings("serial")
 public class easybuy_user_status implements Serializable{
 	

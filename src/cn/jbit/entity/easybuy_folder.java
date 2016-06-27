@@ -1,9 +1,13 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 /**
  * @author 任锯东 文件夹类
  */
+@Entity
+@Table(name="easybuy_folder")
 @SuppressWarnings("serial")
 public class easybuy_folder implements Serializable{
 

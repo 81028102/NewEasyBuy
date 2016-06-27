@@ -1,10 +1,14 @@
 package cn.jbit.entity;
 
 import java.io.Serializable;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 
 /**
  * @author 任锯东 商品实体类
  */
+@Entity
+@Table(name="NoProducts")
 @SuppressWarnings("serial")
 public class NoProducts implements Serializable {
 	
