@@ -1,27 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<?xml version="1.0" encoding="UTF-8"?>	
+    <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
 <struts>
-	<!-- i18n指的是Internationalization单词 一共20位字母 -->
-	<constant name="struts.i18n.encoding" value="UTF-8" />
-	<package name="default" namespace="/" extends="struts-default">
-
-		<!-- interceptor拦截器配置 -->
-		<interceptors>
-			<interceptor name="MyTimerInterceptor"
-				class="cn.jbit.Interceptors.MyTimerInterceptor">
-			</interceptor>
-			<interceptor-stack name="MyStack">
-				<interceptor-ref name="MyTimerInterceptor"></interceptor-ref>
-				<interceptor-ref name="defaultStack" />
-			</interceptor-stack>
-		</interceptors>
-
-		<!-- sendmailAction邮件配置 -->
-		<action name="*Action" class="cn.jbit.action.SendMailAction" method="{1}">
-			<result name="success">/sendmail_success.jsp</result>
-			<result name="error">/sendmail_error.jsp</result>
-			<interceptor-ref name="MyStack"></interceptor-ref>
-			<interceptor-ref name="token"></interceptor-ref>
-		</action>
-	</package>
-</struts>    
+	<!--使用struts的开发模式,开发模式会有更多的调试信息(开发阶段打开)  -->
+	<constant name="struts.devMode" value="true"/>
+	<!-- 当struts.xml改动后,是否重新加载(开发阶段打开) -->
+	<constant name="struts.configuration.xml.reload" value="true"/>
+	<include file="struts-email.xml"/> 
+</struts>

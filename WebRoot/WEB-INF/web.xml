@@ -31,13 +31,11 @@
       <url-pattern>*.action</url-pattern>
    </filter-mapping>
    
-  <!-- Spring的配置信息 -->
+  	<!-- Spring配置文件 1，配置上下文  2，配置监听 -->
   <context-param>
 	<param-name>contextConfigLocation</param-name>
 	<param-value>classpath:applicationContext.xml</param-value>
   </context-param>
-  
-  <!-- listener监听配置信息 -->
    <listener>
       <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
    </listener>
