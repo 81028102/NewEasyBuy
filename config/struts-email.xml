@@ -17,7 +17,8 @@
 		</interceptors>
 
 		<!-- sendmailAction邮件配置 -->
-		<action name="*Action" class="cn.jbit.action.SendMailAction" method="{1}">
+		<action name="*Action" class="cn.jbit.action.SendMailAction"
+			method="{1}">
 			<result name="success">/sendmail_success.jsp</result>
 			<result name="error">/sendmail_error.jsp</result>
 			<interceptor-ref name="MyStack"></interceptor-ref>

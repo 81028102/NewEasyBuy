@@ -4,9 +4,9 @@
     "http://struts.apache.org/dtds/struts-2.1.dtd">
 
 <struts>
-	<!--使用struts的开发模式,开发模式会有更多的调试信息(开发阶段打开)  -->
-	<constant name="struts.devMode" value="true"/>
+	<!--使用struts的开发模式,开发模式会有更多的调试信息(开发阶段打开) -->
+	<constant name="struts.devMode" value="true" />
 	<!-- 当struts.xml改动后,是否重新加载(开发阶段打开) -->
-	<constant name="struts.configuration.xml.reload" value="true"/>
-	<include file="struts-email.xml"/> 
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<include file="struts-email.xml" />
 </struts>
